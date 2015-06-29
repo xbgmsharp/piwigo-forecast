@@ -41,7 +41,7 @@ class forecast_maintain extends PluginMaintain {
   {
     global $conf;
 
-    // configuration
+    // Configuration
     if (!isset($conf['forecast_conf']) || empty($conf['forecast_conf']))
     {
       $this->default_config['last_clean'] = time();
@@ -52,10 +52,14 @@ class forecast_maintain extends PluginMaintain {
     }
     else
     {
-      $new_conf = safe_unserialize($conf['forecast_conf']);
-
-      conf_update_param('forecast_conf', $new_conf, true);
+      $current_conf = safe_unserialize($conf['forecast_conf']);
+      conf_update_param('forecast_conf', aray_merge($this->default_config, $current_conf), true);
     }
+    // Create MySQL View
+    $q = 'DROP VIEW IF EXISTS `forecast`;';
+    pwg_query( $q );
+    $q = 'CREATE VIEW forecast AS SELECT `id`, `latitude`, `longitude`, UNIX_TIMESTAMP( IFNULL(`date_creation`, `date_available`) ) as `date` FROM '.IMAGES_TABLE.' WHERE `latitude` IS NOT NULL AND `longitude` is NOT NULL;';
+    pwg_query( $q );
   }
 
   function activate($plugin_version, &$errors=array()) {
@@ -75,6 +79,8 @@ class forecast_maintain extends PluginMaintain {
     global $conf;
 
     conf_delete_param('forecast_conf');
+    $q = 'DROP VIEW forecast;';
+    pwg_query( $q );
   }
 
 }

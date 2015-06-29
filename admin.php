@@ -31,28 +31,63 @@ check_status(ACCESS_ADMINISTRATOR);
 // Setup plugin Language
 load_language('plugin.lang', PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)).'/');
 
+// Available options
+$available_add_before = array(
+    'Author'    => l10n('Author'),
+    'datecreate'=> l10n('Created on'),
+    'datepost'  => l10n('Posted on'),
+    'Dimensions'=> l10n('Dimensions'),
+    'File'      => l10n('File'),
+    'Filesize'  => l10n('Filesize'),
+    'Tags'      => l10n('Tags'),
+    'Categories'=> l10n('Albums'),
+    'Visits'    => l10n('Visits'),
+    'Average'   => l10n('Rating score'),
+    'rating'    => l10n('Rate this photo'),
+    'Privacy'   => l10n('Who can see this photo?'),
+);
+
+// Available Units, https://developer.forecast.io/docs/v2
+$available_units = array (
+   'us' => 'U.S. units',
+   'si' => 'International System of units',
+   'ca' => 'Canada units',
+   'uk' => 'U.K. units',
+   'auto' => 'Automatic units',
+);
+
+// Available Languages, https://developer.forecast.io/docs/v2
+$available_languages = array (
+    'ar' => 'Arabic',
+    'bs' => 'Bosnian',
+    'de' => 'German',
+    'en' => 'English',
+    'es' => 'Spanish',
+    'fr' => 'French',
+    'it' => 'Italian',
+    'nl' => 'Dutch',
+    'pl' => 'Polish',
+    'pt' => 'Portuguese',
+    'ru' => 'Russian',
+    'sv' => 'Swedish',
+    'tet' => 'Tetum',
+    'tr' => 'Turkish',
+    'x-pig-latin' => 'Igpay Atinlay',
+    'zh' => 'Chinese',
+);
+
 // Update conf if submitted in admin site
 if (isset($_POST['forecast_submit']))
 {
-   if (isset($_POST['cdn_enabled']) and $_POST['cdn_enabled'] == "true" and (empty($_POST['root']) || empty($_POST['host'])))
-   {
-       array_push($page['errors'], l10n('CDN enable but no CDN domain setup or Site Root define'));
-   }
-   else
-   {
-
-   /* handle file ext */
-   $filetypes_arr = array_fill_keys(array_intersect_key($conf['file_ext'], array_unique(array_map('strtolower', $conf['file_ext']))), false);
-   isset($_POST['filetypes']) ? $_POST['filetypes'] = array_merge($filetypes_arr, array_map( $func_arr_map, array_flip($_POST['filetypes']))) : $_POST['filetypes'] = $filetypes_arr;
-   isset($_POST['filetypes_2']) ? $_POST['filetypes_2'] = array_merge($filetypes_arr, array_map( $func_arr_map, array_flip($_POST['filetypes_2']))) : $_POST['filetypes_2'] = $filetypes_arr;
-   isset($_POST['filetypes_3']) ? $_POST['filetypes_3'] = array_merge($filetypes_arr, array_map( $func_arr_map, array_flip($_POST['filetypes_3']))) : $_POST['filetypes_3'] = $filetypes_arr;
-   isset($_POST['filetypes_4']) ? $_POST['filetypes_4'] = array_merge($filetypes_arr, array_map( $func_arr_map, array_flip($_POST['filetypes_4']))) : $_POST['filetypes_4'] = $filetypes_arr;
-   isset($_POST['filetypes_5']) ? $_POST['filetypes_5'] = array_merge($filetypes_arr, array_map( $func_arr_map, array_flip($_POST['filetypes_5']))) : $_POST['filetypes_5'] = $filetypes_arr;
-
-   $conf['forecast_conf'] = array(
-    'cdn_enabled'  => isset($_POST['cdn_enabled']),
-    'cdn_extra_enabled' => isset($_POST['cdn_extra_enabled']),
-    );
+     $conf['forecast_conf'] = array(
+       'add_before' => $_POST['fc_add_before'],
+       'height' => $_POST['fc_height'],
+       'link' => $_POST['fc_link'],
+       'show' => get_boolean($_POST['fc_showlink']),
+       'api_key' => $_POST['fc_api_key'],
+       'unit' => $_POST['fc_unit'],
+       'lang' => $_POST['fc_lang'],
+      );
 
       // Update config to DB
       conf_update_param('forecast_conf', serialize($conf['forecast_conf']));
@@ -62,12 +97,17 @@ if (isset($_POST['forecast_submit']))
 
       // Notify user all is fine
       array_push($page['infos'], l10n('Your configuration settings are saved'));
-    }
 }
 
 $template->set_filename('plugin_admin_content', dirname(__FILE__).'/admin.tpl');
-
 // send value to template
-$template->assign($conf['forecast_conf']);
+$template->assign('fc', $conf['forecast_conf']);
+$template->assign(
+    array(
+        'AVAILABLE_ADD_BEFORE' => $available_add_before,
+        'AVAILABLE_UNITS'      => $available_units,
+        'AVAILABLE_LANGUAGES'  => $available_languages,
+    )
+);
 $template->assign_var_from_handle('ADMIN_CONTENT', 'plugin_admin_content');
 ?>

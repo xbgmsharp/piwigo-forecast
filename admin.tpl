@@ -1,6 +1,10 @@
 <div class="titlePage">
  <h2>{'Forecast'|@translate}</h2>
 </div>
+<style>
+.units2 LI { clear: both; padding-left: 20px; list-style-type: disk; }
+.units li { clear: both; padding-left: 30px; list-style-type: square; }
+</style>
 
 {'PLG_FORECAST'|@translate}
 <br/><br/>
@@ -10,18 +14,54 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
 <fieldset>
    <legend>{'Configuration'|@translate}</legend>
     <ul>
-<!--
-      <li>
-        <label>{'FCIO_ENABLED'|@translate} : </label>
-        <label><input type="checkbox" name="cdn_enabled" id="cdn_enabled" value="true" {if $cdn_enabled} checked="checked"{/if} /></label>
-        <br/><small>{'FCIO_ENABLED_DESC'|@translate}</small>
-      </li>
-      <li>
-        <label>{'FCIO_APIKEY'|@translate} : </label>
-        <label><input type="text" name="mediainfo" value="{$mediainfo}" class="large" /></label>
-        <br/><small>{'FCIO_APIKEY_DESC'|@translate}</small>
-      </li>
--->
+	<li>
+            <label>{'ADD_BEFORE'|@translate} : </label>
+            <select name="fc_add_before">
+                    {html_options options=$AVAILABLE_ADD_BEFORE selected=$fc.add_before}
+            </select>
+            <br/><small>{'ADD_BEFORE_DESC'|@translate}</small>
+        </li>
+        <li>
+            <label>{'HEIGHT'|@translate} : </label>
+            <input type="text" value="{$fc.height}" name="fc_height" size="4" required/>
+            <br/><small>{'HEIGHT_DESC'|@translate}</small>
+        </li>
+	<li>
+            <label>{'UNIT'|@translate} : </label>
+            <select name="fc_unit">
+                    {html_options options=$AVAILABLE_UNITS selected=$fc.unit}
+            </select>
+            <br/><small>{'UNIT_DESC'|@translate}</small>
+        </li>
+	<li>
+            <label>{'LANGUAGE'|@translate} : </label>
+            <select name="fc_lang">
+                    {html_options options=$AVAILABLE_LANGUAGES selected=$fc.lang}
+            </select>
+            <br/><small>{'LANGUAGE_DESC'|@translate}</small>
+        </li>
+        <li>
+            <label>{'HEADER'|@translate} : </label>
+            <input type="text" value="{$fc.link}" name="fc_link" size="30" placeholder="Forecast"/>
+            <br/><small>{'HEADER_DESC'|@translate}</small>
+        </li>
+        <li>
+            <label>{'SHOW_LINK'|@translate} : </label>
+            <label><input type="radio" name="fc_showlink" value="true" {if $fc.show}checked="checked"{/if}/> {'Yes'|@translate}</label>
+            <label><input type="radio" name="fc_showlink" value="false" {if not $fc.show}checked="checked"{/if}/> {'No'|@translate}</label>
+            <br/><small>{'SHOW_LINK_DESC'|@translate}</small>
+        </li>
+    </ul>
+</fieldset>
+
+<fieldset>
+   <legend>{'API Forecast.io'|@translate}</legend>
+    <ul>
+        <li>
+            <label>{'API_KEY'|@translate} : </label>
+            <input type="text" value="{$fc.api_key}" name="fc_api_key" size="60" placeholder="forecast.io API KEY"/>
+            <br/><small>{'API_KEY_DESC'|@translate}</small>
+        </li>
     </ul>
 </fieldset>
 
