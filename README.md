@@ -36,6 +36,12 @@ To get support, please create new [issue](https://github.com/xbgmsharp/piwigo-fo
 
 Help me improve the plugin, rate my [plugin](http://piwigo.org/ext/extension_view.php?eid=795), and if possible please send a greeting message to me ;)
 
+Thanks
+-----
+
+* [forecast.io](http://forecast.io/)
+* [skycons](https://darkskyapp.github.io/skycons/)
+
 Licence
 -------
 The piwigo-forecast plugin for Piwigo is free software:  you can redistribute it
