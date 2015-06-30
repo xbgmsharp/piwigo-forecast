@@ -1,10 +1,6 @@
 <div class="titlePage">
  <h2>{'Forecast'|@translate}</h2>
 </div>
-<style>
-.units2 LI { clear: both; padding-left: 20px; list-style-type: disk; }
-.units li { clear: both; padding-left: 30px; list-style-type: square; }
-</style>
 
 {'PLG_FORECAST'|@translate}
 <br/><br/>
@@ -21,11 +17,18 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
             </select>
             <br/><small>{'ADD_BEFORE_DESC'|@translate}</small>
         </li>
+<!--
         <li>
-            <label>{'HEIGHT'|@translate} : </label>
-            <input type="text" value="{$fc.height}" name="fc_height" size="4" required/>
-            <br/><small>{'HEIGHT_DESC'|@translate}</small>
+            <label>{'COLOR_BKG'|@translate} : </label>
+            <input type="text" value="{$fc.color_bkg}" name="fc_color_bkg" size="4" required/>
+            <br/><small>{'COLOR_BKG_DESC'|@translate}</small>
         </li>
+        <li>
+            <label>{'COLOR_TEXT'|@translate} : </label>
+            <input type="text" value="{$fc.color_text}" name="fc_color_text" size="4" required/>
+            <br/><small>{'COLOR_TEXT_DESC'|@translate}</small>
+        </li>
+-->
 	<li>
             <label>{'UNIT'|@translate} : </label>
             <select name="fc_unit">

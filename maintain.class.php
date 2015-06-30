@@ -30,7 +30,7 @@ class forecast_maintain extends PluginMaintain {
   private $default_config = array(
     'add_before' => 'Average',
     'height' => 200,
-    'link' => 'Forecast',
+    'link' => 'Overcast',
     'show' => true,
     'api_key' => '',
     'unit' => 'auto',
