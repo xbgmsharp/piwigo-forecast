@@ -5,7 +5,7 @@
 
 {footer_script}
 {literal}
-
+// BEGIN skycons / Animate weather icons
   var skycons = new Skycons({"color": "black"});
   // on Android, a nasty hack is needed: {"resizeClear": true}
 
@@ -17,7 +17,7 @@
 
   // if you're using the Forecast API, you can also supply
   // strings: "partly-cloudy-day" or "rain".
-  skycons.add("icon_current", "{/literal}{$FORECAST_ICON}{literal}");
+  skycons.add("icon_current", "{/literal}{$FORECAST_DATA->icon}{literal}");
 
   // start animation!
   skycons.play();
@@ -29,6 +29,14 @@
 
   // want to remove one altogether? no problem:
   //skycons.remove("icon2");
+// END skycons
+
+// Jquery helper
+$(document).ready(function () {
+    $(document).on('click', '.inner', function () {
+	$( "div.current_container" ).toggleClass( "show_more" );
+    });
+});
 
 {/literal}
 {/footer_script}
