@@ -35,6 +35,8 @@
 $(document).ready(function () {
     $(document).on('click', '.inner', function () {
 	$( "div.current_container" ).toggleClass( "show_more" );
+	var el = $("span.more_button");
+  	el.text(el.text() === "-" ? "+" : "-");
     });
 });
 
