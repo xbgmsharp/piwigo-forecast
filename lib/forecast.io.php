@@ -4,6 +4,7 @@
  * Helper Class for forecast.io webservice
  * from https://github.com/tobias-redmann/forecast.io-php-api/
  * Update by xbgmsharp to support https://github.com/xbgmsharp/nodejs-forecast
+ * https://developer.forecast.io/docs/v2
  */
 class ForecastIO
 {
@@ -14,7 +15,7 @@ class ForecastIO
     const API_ENDPOINT = 'https://api.forecast.io/forecast/';
 
    /**
-    * Francois update
+    * xbgmsharp update
     * to support Proxy call
     *
     */
@@ -69,19 +70,27 @@ class ForecastIO
     }
 
 
+    /**
+     * Make the request to Forecast.io API
+     * @param string $latitude $longitude $timestamp $exclusions
+     * @return JSON data or false
+     */
     private function requestData($latitude, $longitude, $timestamp = false, $exclusions = false)
     {
 
         $validUnits = array('auto', 'us', 'si', 'ca', 'uk');
+        $validLangs = array('ar', 'bs', 'de', 'en', 'es', 'fr', 'it', 'nl', 'pl', 'pt', 'ru', 'sv', 'tet', 'tr', 'x-pig-latin', 'zh');
 
-        if (in_array($this->units, $validUnits)) {
+        // Ensure our data are valid, you never know
+        if (in_array($this->units, $validUnits) and in_array($this->language, $validLangs)) {
 
             /**
              * If proxy set make a proxy call
              */
             if ($this->proxy) {
               $request_url = self::PROXY_API_ENDPOINT .
-                $latitude . '/' . $longitude . '/' . $timestamp;
+                $latitude . '/' . $longitude . '/' . $timestamp . '/' .
+                $this->units . '/' . $this->language;
 
             } else {
               // Direct API call
@@ -106,7 +115,13 @@ class ForecastIO
                 $cache = new Buffer();
                 $content = $cache->data($request_url);
             } else {
-                $content = file_get_contents($request_url);
+		if (false !== ($content = @file_get_contents($request_url))) {
+			// all good
+			//return $content;
+		} else {
+			// error happened
+			return false;
+		}
             }
 
         } else {
@@ -163,19 +178,24 @@ class ForecastIO
     public function getHistoricalConditions($latitude, $longitude, $timestamp)
     {
 
-        $exclusions = 'currently,minutely,hourly,alerts,flags';
+        $exclusions = 'currently,minutely,hourly,alerts';
 
         $data = $this->requestData($latitude, $longitude, $timestamp, $exclusions);
-
         if ($data !== false) {
-
-              if ( ! $this->proxy) { // Direct call
+              if ( !$this->proxy and isset($data->daily->data[0])) { // Direct call
 	//            return new ForecastIOConditions($data->daily->data[0]);
+                      // Add unit to daily data if present
+                      isset($data->flags->units) ? $data->daily->data[0]->units = $data->flags->units : '';
+                      // Add timezone to daily data if present
+                      isset($data->timezone) ? $data->daily->data[0]->timezone = $data->timezone : '';
 	              return $data->daily->data[0];
 		} else { // Via Proxy
-
-			if ($data->success[0]) {
-				return $data->success[0]->result->daily->data[0];
+			if (isset($data->success[0]) and isset($data->success[0]->result)) {
+                              // Add unit to daily data if present
+	                      isset($data->success[0]->result->flags->units) ? $data->success[0]->result->daily->data[0]->units = $data->success[0]->result->flags->units : '';
+                              // Add timezone to daily data if present
+	                      isset($data->success[0]->result->timezone) ? $data->success[0]->result->daily->data[0]->timezone = $data->success[0]->result->timezone : '';
+		              return $data->success[0]->result->daily->data[0];
 			} else {
 				return null;
 			}
