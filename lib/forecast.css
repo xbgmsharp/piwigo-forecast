@@ -1,21 +1,73 @@
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Pictos';
+  src: url('fonts/pictos-web.woff') format('woff');
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Condens 721299";
+  src: url("fonts/AvenirNextLTW01-Condens.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNextLTW01-DemiCn";
+  src: url("fonts/AvenirNextLTW01-DemiCn.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNextLTW01-MediumC 721311";
+  src: url("fonts/AvenirNextLTW01-MediumC.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNextLTW01-BoldCn";
+  src: url("fonts/AvenirNextLTW01-BoldCn.woff") format("woff");
+}
+
+#forecast-info .avenir {
+  font-family: "AvenirNextCondensed-Regular", "AvenirNextLTW01-Condens 721299", "Arial Narrow", Verdana, sans-serif;
+  font-weight: 400;
+}
+#forecast-info .avenir_medium {
+  font-family: "AvenirNextCondensed-Medium", "AvenirNextLTW01-MediumC 721311", "Arial Narrow", Verdana, sans-serif;
+}
+#forecast-info .avenir_demi {
+  font-family: "AvenirNextCondensed-DemiBold", "AvenirNextLTW01-DemiCn", "Arial Narrow", Verdana, sans-serif;
+}
+#forecast-info .avenir_bold {
+  font-family: "AvenirNextCondensed-Bold", "AvenirNextLTW01-BoldCn", "Arial Narrow", Verdana, sans-serif;
+}
+#forecast-info .pictos {
+    font-family: "Pictos";
+}
+
 #forecast-info .inner {
     display: table-cell;
     vertical-align: middle;
     padding: 10px 0px;
     background: #FFF;
+    cursor: pointer;
+    color: #000;
 }
 
-#forecast-info .section h2 {
+#forecast-info .section.currently h2 {
     width: 100%;
     height: 40px;
     line-height: 40px;
     font-family: "AvenirNextCondensed-Medium","AvenirNextLTW01-MediumC 721311","Arial Narrow",Verdana,sans-serif;
-    font-size: 28px;
-    text-align: left;
+    /*font-size: 28px;*/
+    font-size: 20px;
+    /*text-align: left;*/
+    text-align: center;
     color: #222;
 }
 #forecast-info h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
+}
+
+#forecast-info .section.currently .current_container.show_more .more {
+    opacity: 1;
+}
+
+#forecast-info .section.currently .current_container.show_more .less {
+    opacity: 0;
 }
 
 #forecast-info .section.currently .more_button {
@@ -27,8 +79,24 @@
     transition: opacity 0.1s linear 0s;
 }
 
+#forecast-info .section.currently {
+    cursor: pointer;
+}
+
 #forecast-info .pictos {
     font-family: "Pictos";
+}
+
+#forecast-info .section.currently:hover .more_button {
+  opacity: 0.9;
+}
+
+#forecast-info.precip .section.currently {
+  margin-top: 0;
+}
+
+#forecast-info.alerts .section.currently {
+  margin-top: 0;
 }
 
 #forecast-info .section.currently .current_container {
@@ -47,6 +115,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 #forecast-info .section.currently #icon_current {
@@ -68,11 +137,13 @@
     line-height: 1.2em;
     margin-top: 2px;
 }
+
 #forecast-info .section .desc {
     font-family: "AvenirNextCondensed-Regular","AvenirNextLTW01-Condens 721299","Arial Narrow",Verdana,sans-serif;
     font-weight: 400;
     font-size: 20px;
-    text-align: left;
+    /*text-align: left;*/
+    text-align: justify;
 }
 
 #forecast-info .section.currently .current_container .more {
@@ -90,7 +161,8 @@
     position: absolute;
     left: 156px;
     right: 0px;
-    width: 135px;
+    /*width: 135px;*/
+    width: 105px;
     margin-top: 4px;
     margin: 0px;
     padding: 0px;
@@ -106,19 +178,62 @@
 
 #forecast-info .section.currently .current_container .more .temps .high_low {
     margin-top: 12px;
-    margin: 0px;
+    /*margin: 0px; */
     padding: 0px;
     box-sizing: border-box;
+}
+
+#forecast-info .section.currently .current_container .more .label {
+    display: inline-block;
+    width: 68px;
+    font-family: "AvenirNextCondensed-Bold","AvenirNextLTW01-BoldCn","Arial Narrow",Verdana,sans-serif;
+    text-align: left;
 }
 
 #forecast-info .section.currently .current_container .more .table {
     position: absolute;
     left: 0px;
     right: 0px;
-    width: 146px;
+    /*width: 146px;*/
+    width: 155px;
     border-right: 1px dashed #666;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+.windicator {
+  margin-top: -1px;
+  margin-left: 2px;
+  width: 22px;
+  height: 22px;
+  vertical-align: text-top;
+  display: inline-block;
+  background: transparent url(data:image/png;base64,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) 0 0 no-repeat;
+  background-size: 22px 180px;
+  opacity: 0.8;
+}
+.windicator.frame_0 {
+  background-position: 0 0;
+}
+.windicator.frame_1 {
+  background-position: 0 -22.5px;
+}
+.windicator.frame_2 {
+  background-position: 0 -45px;
+}
+.windicator.frame_3 {
+  background-position: 0 -67.5px;
+}
+.windicator.frame_4 {
+  background-position: 0 -90px;
+}
+.windicator.frame_5 {
+  background-position: 0 -112.5px;
+}
+.windicator.frame_6 {
+  background-position: 0 -135px;
+}
+.windicator.frame_7 {
+  background-position: 0 -157.5px;
+}
