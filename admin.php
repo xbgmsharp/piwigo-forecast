@@ -81,7 +81,6 @@ if (isset($_POST['forecast_submit']))
 {
      $conf['forecast_conf'] = array(
        'add_before' => $_POST['fc_add_before'],
-       'height' => $_POST['fc_height'],
        'link' => $_POST['fc_link'],
        'show' => get_boolean($_POST['fc_showlink']),
        'api_key' => $_POST['fc_api_key'],
