@@ -53,7 +53,7 @@ class forecast_maintain extends PluginMaintain {
     else
     {
       $current_conf = safe_unserialize($conf['forecast_conf']);
-      conf_update_param('forecast_conf', aray_merge($this->default_config, $current_conf), true);
+      conf_update_param('forecast_conf', array_merge($this->default_config, $current_conf), true);
     }
     // Create MySQL View
     $q = 'DROP VIEW IF EXISTS `forecast`;';

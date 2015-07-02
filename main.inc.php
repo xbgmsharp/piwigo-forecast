@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Forecast
-Version: 2.7.a
+Version: 2.7.b
 Description: Forecast.io integration for Piwigo
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=795
 Author: xbmgsharp

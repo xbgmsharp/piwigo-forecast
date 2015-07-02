@@ -1,2 +1,7 @@
+Changes from v2.7.a to v2.7.b
+- Display details weather condition (Temperature, Wind, Humidity, etc...)
+- Add configuration options (units, language, color, etc...)
+- Improve error handling
+
 Initial Release v2.7.a
 - Initial release
