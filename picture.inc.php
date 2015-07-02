@@ -60,7 +60,7 @@ function forecast_insert_map($content, &$smarty)
 
                   <div class="more">
                     <div class="temps">
-                      <div class="dir m">Sun rose at {$FORECAST_DATA->sunriseTime} and set at {$FORECAST_DATA->sunsetTime}.</div>
+                      <div class="dir m">Sun rose at <span class="m">{$FORECAST_DATA->sunriseTime}</span><br>and set at <span class="m">{$FORECAST_DATA->sunsetTime}</span>.</div>
                       <div class="high_low">Low, <span class="m">{$FORECAST_DATA->temperatureMin}</span> at <span class="m">{$FORECAST_DATA->temperatureMinTime}</span>,<br>High, <span class="m">{$FORECAST_DATA->temperatureMax}</span> at <span class="m">{$FORECAST_DATA->temperatureMaxTime}</span>.</div>
                     </div>
 
