@@ -1,12 +1,12 @@
 <?php
 /***********************************************
-* File      :   admin.php
+* File      :   admin_config.php
 * Project   :   piwigo-forecast
-* Descr     :   Install / Uninstall method
+* Descr     :   Configuration panel
 *
 * Created   :   23.04.2015
 *
-* Copyright 2013-2015 <xbgmsharp@gmail.com>
+* Copyright 2015 <xbgmsharp@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 
 // Setup plugin Language
-load_language('plugin.lang', PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)).'/');
+load_language('plugin.lang', FORECAST_PATH);
 
 // Available options
 $available_add_before = array(
@@ -77,10 +77,12 @@ $available_languages = array (
 );
 
 // Update conf if submitted in admin site
-if (isset($_POST['forecast_submit']))
+if (isset($_POST['forecast_config_submit']))
 {
      $conf['forecast_conf'] = array(
        'add_before' => $_POST['fc_add_before'],
+       'color_bkg' => $_POST['fc_color_bkg'],
+       'color_txt' => $_POST['fc_color_txt'],
        'link' => $_POST['fc_link'],
        'show' => get_boolean($_POST['fc_showlink']),
        'api_key' => $_POST['fc_api_key'],
