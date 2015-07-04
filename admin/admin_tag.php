@@ -29,11 +29,11 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 // Check access and exit when user status is not ok
 check_status(ACCESS_ADMINISTRATOR);
 
+// Fetch the template.
+global $template, $conf;
+
 // Setup plugin Language
 load_language('plugin.lang', FORECAST_PATH);
-
-// Fetch the template.
-global $template, $conf, $lang;
 
 // Generate default value
 $sync_options = array(
@@ -76,36 +76,37 @@ if ( isset($_POST['forecast_tag_submit']) )
 		$query='SELECT `id`, `name`, `latitude`, `longitude`, UNIX_TIMESTAMP( IFNULL(`date_creation`, `date_available`) ) as `date` FROM '.IMAGES_TABLE.' WHERE '. SQL_EXIF;
 	}
 
+	//  Init Forecast.io lib
+	include(FORECAST_PATH .'lib/forecast.io.php');
+	$fc_api_key = isset($conf['forecast_conf']['api_key']) ? $conf['forecast_conf']['api_key'] : '';
+	// Can be set to 'us', 'si', 'ca', 'uk' or 'auto' (see forecast.io API); default is auto
+	// Can be set to 'en', 'de', 'pl', 'es', 'fr', 'it', 'tet' or 'x-pig-latin' (see forecast.io API); default is 'en'
+	$fc_unit = isset($conf['forecast_conf']['unit']) ? $conf['forecast_conf']['unit'] : 'auto';
+	$fc_lang = isset($conf['forecast_conf']['lang']) ? $conf['forecast_conf']['lang'] : 'en';
+	/* Do we have a Forecast.io API key */
+	if (strlen($fc_api_key) != 0)
+	{
+		// Make a request to Forecast.io using the user supply API, proxy set to false
+		$forecast = new ForecastIO($fc_api_key, $fc_unit, $fc_lang, false);
+	}
+	else // We do NOT have a Key
+	{
+		/**
+		 * Make a request to https://forecast-xbgmsharp.rhcloud.com
+		 * to non disclose the Forecast.io API key, proxy set to true
+		 * Source code at https://github.com/xbgmsharp/nodejs-forecast
+		 **/
+		$forecast = new ForecastIO($fc_api_key, $fc_unit, $fc_lang, true);
+	}
+
 	$images = hash_from_query( $query, 'id');
 	$datas = array();
 	$errors = array();
 	$warnings = array();
 	$infos = array();
-	//  Init Forecast.io lib
-	include(FORECAST_PATH .'lib/forecast.io.php');
 	foreach ($images as $image)
 	{
 		// Fech reverse location from API
-		$fc_api_key = isset($conf['forecast_conf']['api_key']) ? $conf['forecast_conf']['api_key'] : '';
-		// Can be set to 'us', 'si', 'ca', 'uk' or 'auto' (see forecast.io API); default is auto
-		// Can be set to 'en', 'de', 'pl', 'es', 'fr', 'it', 'tet' or 'x-pig-latin' (see forecast.io API); default is 'en'
-		$unit = isset($conf['forecast_conf']['unit']) ? $conf['forecast_conf']['unit'] : 'auto';
-		$lang = isset($conf['forecast_conf']['lang']) ? $conf['forecast_conf']['lang'] : 'en';
-		/* Do we have a Forecast.io API key */
-		if (strlen($fc_api_key) != 0)
-		{
-			// Make a request to Forecast.io using the user supply API, proxy set to false
-			$forecast = new ForecastIO($fc_api_key, $unit, $lang, false);
-		}
-		else // We do NOT have a Key
-		{
-			/**
-			 * Make a request to https://forecast-xbgmsharp.rhcloud.com
-			 * to non disclose the Forecast.io API key, proxy set to true
-			 * Source code at https://github.com/xbgmsharp/nodejs-forecast
-			 **/
-			$forecast = new ForecastIO($fc_api_key, $unit, $lang, true);
-		}
 		$condition = $forecast->getHistoricalConditions($image['latitude'], $image['longitude'], $image['date']);
 
 		if (!isset($condition) or $condition === 'false')
@@ -122,6 +123,10 @@ if ( isset($_POST['forecast_tag_submit']) )
 			}
 			$infos[] = "Set tag '". $condition->icon ."' for ". $image['name'];
 			$datas[] = $image['id'];
+		}
+		else
+		{
+			$warnings[] = "No valid tags for ". $image['name'];
 		}
 		//die("Done one image");
 	} // Images loop

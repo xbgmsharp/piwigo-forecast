@@ -11,9 +11,9 @@
 </style>
 {/html_head}
 
-Create tags from weather condition.
+Create tags from the weather condition base on the GPS (latitude, longitude) and time metadata information. 
 <br/><br/>
-Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target="_blanck">plugin documentation</a> for additional information. Create an <a href="https://github.com/xbgmsharp/piwigo-forecast/issues" target="_blanck">issue</a> for support, or feedback, or feature request.
+Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target="_blank">plugin documentation</a> for additional information. Create an <a href="https://github.com/xbgmsharp/piwigo-forecast/issues" target="_blank">issue</a> for support, or feedback, or feature request.
 
 <div class="osm_layout">
   <legend>{'Statistics'|@translate}</legend>
@@ -37,8 +37,8 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
 <div class="osm_layout">
   <legend>Synchronization results</legend>
   <ul>
-	<li>{$metadata_result.NB_ELEMENTS_DONE} {'photos updated in the database'|@translate}</li>
-	<li>{$metadata_result.NB_ELEMENTS_CANDIDATES} {'photos candidates for metadata synchronization'|@translate}</li>
+	<li>{$metadata_result.NB_ELEMENTS_DONE} {'tags updated in the database'|@translate}</li>
+	<li>{$metadata_result.NB_ELEMENTS_CANDIDATES} {'photos candidates for tags synchronization'|@translate}</li>
 	<li>{$metadata_result.NB_WARNINGS} {'warnings during synchronization'|@translate}</li>
 	<li>{$metadata_result.NB_ERRORS} {'errors during synchronization'|@translate}</li>
   </ul>
@@ -81,12 +81,17 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
 
 <form action="" method="post" id="update">
 
-  <fieldset id="taggroup">
-    <legend>{'Tag Group'|@translate}</legend>
-    <ul>
-      <li><label><input type="text" name="fc_taggroup" value="weather" placeholder="weather" required="" /> {'Name of the tag group'|@translate}</label></li>
-    </ul>
-  </fieldset>
+  <fieldset id="tags">
+	<legend>{'Manage tags'|@translate}</legend>
+	<ul>
+		<li>
+			<label>
+				<input type="text" name="fc_taggroup" value="weather" placeholder="weather" required="" /> {'Name of the tag group'|@translate}
+			</label>
+			<br/><small>Tag can be one of the following values: clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, or partly-cloudy-night</small>
+		</li>
+	</ul>
+   </fieldset>
 
   <fieldset id="syncSimulation">
     <legend>{'Simulation'|@translate}</legend>
