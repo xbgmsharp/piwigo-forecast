@@ -22,14 +22,11 @@
 // +-----------------------------------------------------------------------+
 $lang['ADD_BEFORE'] = 'Tilføj vejr før';
 $lang['VIEW_FORECAST'] = 'Se hos Forecast.io';
-$lang['DISPLAY'] = 'Visningsopsætning';
 $lang['HEADER'] = 'Headers navn';
 $lang['HEADER_DESC'] = 'Angiv navn der skal vises oven på overskyet-detaljer.';
 $lang['LANGUAGE'] = 'Sprog';
 $lang['LANGUAGE_DESC'] = 'Vælg det ønskede sprog. Vær opmærksom på, at enheder i resumet vil blive opsat jævnfør enhedsopsætningen oven for, så sørg for at opsætte begge indstillinger som ønsket.';
 $lang['PLG_FORECAST'] = 'Plugin\'en viser vejrudsigtsforhold ud fra et billedes eller videos placering og dato.';
-$lang['SHOWLOCATION'] = 'Vis placeringskort';
-$lang['SHOWLOCATION_DESC'] = 'Vis et kort i det højre panel på billedsiden.';
 $lang['SHOW_LINK'] = 'Vis "Se hos Forecast".';
 $lang['SHOW_LINK_DESC'] = 'Tilføj et link efter gråvejret for at se det hos Forecast.io.';
 $lang['UNIT'] = 'Enhed';

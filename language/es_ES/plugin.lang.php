@@ -22,8 +22,6 @@
 // +-----------------------------------------------------------------------+
 $lang['LANGUAGE_DESC'] = 'Seleccione el idioma deseado. Tenga en cuenta que las unidades en el resumen se establecerán de acuerdo con la opción de unidades, arriba, así que asegúrese de configurar las dos opciones, según sea necesario.';
 $lang['PLG_FORECAST'] = 'Este plugin muestra información local y fecha a partir de una imagen o vídeo.';
-$lang['SHOWLOCATION'] = 'Mostrar mapa local';
-$lang['SHOWLOCATION_DESC'] = 'Mostrar un mapa a la derecha del panel de la pagina foto.';
 $lang['SHOW_LINK'] = 'Mostrar "Visto en previsión"';
 $lang['SHOW_LINK_DESC'] = 'Añadir un enlace después para visualizarlo en Forecast.io.';
 $lang['UNIT'] = 'Unidad';
@@ -37,7 +35,6 @@ $lang['COLOR_BKG'] = 'Color de fondo';
 $lang['COLOR_BKG_DESC'] = 'Color de fondo, blanco por defecto';
 $lang['COLOR_TEXT'] = 'Color del texto';
 $lang['COLOR_TEXT_DESC'] = 'Color del texto e icono, negro por defecto';
-$lang['DISPLAY'] = 'Mostrar la configuración';
 $lang['HEADER'] = 'Nombre del encabezado';
 $lang['HEADER_DESC'] = 'Escriba el nombre para mostrar en la parte superior el detalle escondido.';
 $lang['LANGUAGE'] = 'Idioma';

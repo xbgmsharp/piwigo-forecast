@@ -20,12 +20,9 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['DISPLAY'] = 'Visa konfiguration';
 $lang['HEADER'] = 'Rubrik';
 $lang['VIEW_FORECAST'] = 'Visa på Forcast.io';
 $lang['SHOW_LINK'] = 'Visa \'Visa på Forecast\'';
-$lang['SHOWLOCATION_DESC'] = 'Visa en karta på högra panelen på bildsidan.';
-$lang['SHOWLOCATION'] = 'Visa ortskarta';
 $lang['PLG_FORECAST'] = 'Denna tilläggsmodul visar en väderprognos från ort och datum på ett foto eller en video. ';
 $lang['LANGUAGE_DESC'] = 'Välj önskat språk. Notera att enhet i summeringen kommer att sättas enligt enhetsvalet ovan, så sätt båda valen.';
 $lang['HEADER_DESC'] = 'Rubrik som visas ovanför väderprognos. ';

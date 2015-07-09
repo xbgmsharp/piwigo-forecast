@@ -23,7 +23,6 @@
 $lang['UNIT'] = 'Enhet';
 $lang['UNIT_DESC'] = 'Velg relevante enheter. Standard er auto.';
 $lang['VIEW_FORECAST'] = 'Vis på Forecast.io';
-$lang['DISPLAY'] = 'Vis konfigurasjon';
 $lang['HEADER'] = 'Navn på header';
 $lang['LANGUAGE'] = 'Språk';
 $lang['LANGUAGE_DESC'] = 'Velg ønsket språk. Pass på at enheter i oppsummering blir satt samtidig med enhetsvalgene, ovenfor, så oass på at begge er satt riktig.';
