@@ -1,9 +1,3 @@
-Add parameter where to insert the Forecast like OpenStreetMap
-Allow to use my proxy or to use there own Forecast API Key
-Allow to set the height/color/design view like OpenStreetMap
-Allow to set Name of the location header like OpenStreetMap or force the use of the localEditing language 
-Allow to add "Display 'View on OpenStreetMap' :" like OpenStreetMap
-Allow to set units
-Allow to set language
+Allow to set the color/design view like OpenStreetMap
 Cache Store data in a local tables?
 
