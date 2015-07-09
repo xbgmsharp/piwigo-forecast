@@ -78,7 +78,7 @@ class ForecastIO
     private function requestData($latitude, $longitude, $timestamp = false, $exclusions = false)
     {
 
-        $validUnits = array('auto', 'us', 'si', 'ca', 'uk');
+        $validUnits = array('auto', 'us', 'si', 'ca', 'uk', 'uk2');
         $validLangs = array('ar', 'bs', 'de', 'en', 'es', 'fr', 'it', 'nl', 'pl', 'pt', 'ru', 'sv', 'tet', 'tr', 'x-pig-latin', 'zh');
 
         // Ensure our data are valid, you never know

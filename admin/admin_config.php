@@ -52,7 +52,7 @@ $available_units = array (
    'us' => 'U.S. units',
    'si' => 'International System of units',
    'ca' => 'Canada units',
-   'uk' => 'U.K. units',
+   'uk2' => 'U.K. units',
    'auto' => 'Automatic units',
 );
 
