@@ -170,13 +170,13 @@ function forecast_render_element_content()
     include('lib/forecast.io.php');
     // Can be set to 'us', 'si', 'ca', 'uk' or 'auto' (see forecast.io API); default is auto
     // Can be set to 'en', 'de', 'pl', 'es', 'fr', 'it', 'tet' or 'x-pig-latin' (see forecast.io API); default is 'en'
-    $unit = isset($conf['forecast_conf']['unit']) ? $conf['forecast_conf']['unit'] : 'auto';
-    $lang = isset($conf['forecast_conf']['lang']) ? $conf['forecast_conf']['lang'] : 'en';
+    $fc_unit = isset($conf['forecast_conf']['unit']) ? $conf['forecast_conf']['unit'] : 'auto';
+    $fc_lang = isset($conf['forecast_conf']['lang']) ? $conf['forecast_conf']['lang'] : 'en';
     /* Do we have a Forecast.io API key */
     if (strlen($fc_api_key) != 0)
     {
 	// Make a request to Forecast.io using the user supply API, proxy set to false
-	$forecast = new ForecastIO($fc_api_key, $unit, $lang, false);
+	$forecast = new ForecastIO($fc_api_key, $fc_unit, $fc_lang, false);
     }
     else // We do NOT have a Key
     {
@@ -185,7 +185,7 @@ function forecast_render_element_content()
          * to non disclose the Forecast.io API key, proxy set to true
          * Source code at https://github.com/xbgmsharp/nodejs-forecast
          **/
-	$forecast = new ForecastIO($fc_api_key, $unit, $lang, true);
+	$forecast = new ForecastIO($fc_api_key, $fc_unit, $fc_lang, true);
     }
     $condition = $forecast->getHistoricalConditions($lat, $lon, $date);
     if (!isset($condition) or $condition === 'false') { return; }

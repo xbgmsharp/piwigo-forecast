@@ -1,0 +1,1 @@
+Integrerer Forecast.io med Piwigo.

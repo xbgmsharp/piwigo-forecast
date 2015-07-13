@@ -1,7 +1,3 @@
-<div class="titlePage">
- <h2>{'Forecast'|@translate}</h2>
-</div>
-
 {'PLG_FORECAST'|@translate}
 <br/><br/>
 Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target="_blanck">plugin documentation</a> for additional information. Create an <a href="https://github.com/xbgmsharp/piwigo-forecast/issues" target="_blanck">issue</a> for support, or feedback, or feature request.
@@ -25,7 +21,7 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
         </li>
         <li>
             <label>{'COLOR_TEXT'|@translate} : </label>
-            <input type="text" value="{$fc.color_text}" name="fc_color_text" size="4" required/>
+            <input type="text" value="{$fc.color_txt}" name="fc_color_txt" size="4" required/>
             <br/><small>{'COLOR_TEXT_DESC'|@translate}</small>
         </li>
 -->

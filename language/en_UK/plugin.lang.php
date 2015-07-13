@@ -1,14 +1,11 @@
 <?php
 $lang['PLG_FORECAST'] = "This plugin display forecast condition from the location and the date of an image or video.";
-$lang['DISPLAY'] = "Display configuration";
-$lang['SHOWLOCATION'] = "Display location map";
 $lang['UNIT'] = "Unit";
 $lang['UNIT_DESC'] = "Select the relevant units. Default is auto.";
 $lang['LANGUAGE'] = "Language";
 $lang['LANGUAGE_DESC'] = "Select the desired language. Please be advised that units in the summary will be set according to the units option, above, so be sure to set both options as needed.";
-$lang['SHOWLOCATION_DESC'] = "Show a map on right panel on picture page.";
-$lang['ADD_BEFORE'] = "Add location before";
-$lang['ADD_BEFORE_DESC'] = "Where to display the location information.";
+$lang['ADD_BEFORE'] = "Add weather before";
+$lang['ADD_BEFORE_DESC'] = "Where to display the weather information.";
 $lang['COLOR_BKG'] = "Color Background";
 $lang['COLOR_BKG_DESC'] = "Color of the backgrond, default is white.";
 $lang['COLOR_TEXT'] = "Color Text";
