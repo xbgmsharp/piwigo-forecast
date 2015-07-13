@@ -49,6 +49,12 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
             <br/><small>{'HEADER_DESC'|@translate}</small>
         </li>
         <li>
+            <label>{'SHOW_MODE'|@translate} : </label>
+            <label><input type="radio" name="fc_mode" value="true" {if $fc.mode}checked="checked"{/if}/> {'Textual'|@translate}</label>
+            <label><input type="radio" name="fc_mode" value="false" {if not $fc.mode}checked="checked"{/if}/> {'Graphical'|@translate}</label>
+            <br/><small>{'SHOW_MODE_DESC'|@translate}</small>
+        </li>
+        <li>
             <label>{'SHOW_LINK'|@translate} : </label>
             <label><input type="radio" name="fc_showlink" value="true" {if $fc.show}checked="checked"{/if}/> {'Yes'|@translate}</label>
             <label><input type="radio" name="fc_showlink" value="false" {if not $fc.show}checked="checked"{/if}/> {'No'|@translate}</label>

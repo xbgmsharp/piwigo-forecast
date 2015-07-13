@@ -86,6 +86,7 @@ if (isset($_POST['forecast_submit']))
        'api_key' => $_POST['fc_api_key'],
        'unit' => $_POST['fc_unit'],
        'lang' => $_POST['fc_lang'],
+       'mode' => get_boolean($_POST['fc_mode']),
       );
 
       // Update config to DB

@@ -46,7 +46,23 @@ function forecast_insert_map($content, &$smarty)
 {if $FORECAST_DATA}
 <div id="forecast-info" class="imageInfo">
     <dt>{$FORECAST_NAME}</dt>
-    <dd>
+    <dd>';
+
+    if($conf['forecast_conf']['mode']) {
+
+        $replacement .= '
+           <i>{$FORECAST_DATA->summary}</i> <br/>
+            Max temp: <b>{$FORECAST_DATA->temperatureMax}</b> at {$FORECAST_DATA->temperatureMaxTime}<br/>
+            Min temp: <b>{$FORECAST_DATA->temperatureMin}</b> at {$FORECAST_DATA->temperatureMinTime}<br/>
+            Wind: <b>{$FORECAST_DATA->windSpeed}</b> winds from the {$FORECAST_DATA->windDirection}<br/>
+            Humidity: <b>{$FORECAST_DATA->humidity}</b><br/>
+            Pressure: <b>{$FORECAST_DATA->pressure}</b><br/>
+            Sunrise: <b>{$FORECAST_DATA->sunriseTime}</b><br/>
+            Sunset: <b>{$FORECAST_DATA->sunsetTime}</b><br/>';
+
+    } else {
+
+        $replacement .= '
             <section class="currently section">
               <div class="inner">
                 <h2>{$FORECAST_DATA->time}<span class="more_button pictos">+</span></h2>
@@ -91,7 +107,10 @@ function forecast_insert_map($content, &$smarty)
 
               </div>
             </section>
+     ';
+    }
 
+    $replacement .= '
         <div id="forecast_attrib" style="visibility: hidden; display: none;">
             <ul>
                 <li>{"PLUGIN_BY"|@translate}</li>
