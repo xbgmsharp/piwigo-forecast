@@ -29,7 +29,8 @@ class forecast_maintain extends PluginMaintain {
 
   private $default_config = array(
     'add_before' => 'Average',
-    'height' => 200,
+    'color_bkg' => '#FFF',
+    'color_txt' => '#222',
     'link' => 'Overcast',
     'show' => true,
     'api_key' => '',

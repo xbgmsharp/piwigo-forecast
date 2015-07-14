@@ -109,6 +109,7 @@ $template->assign(
         'AVAILABLE_ADD_BEFORE' => $available_add_before,
         'AVAILABLE_UNITS'      => $available_units,
         'AVAILABLE_LANGUAGES'  => $available_languages,
+	'FORECAST_PATH'        => embellish_url(get_gallery_home_url().FORECAST_PATH),
     )
 );
 $template->assign_var_from_handle('ADMIN_CONTENT', 'plugin_admin_content');

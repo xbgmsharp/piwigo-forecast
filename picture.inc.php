@@ -157,14 +157,13 @@ function forecast_render_element_content()
     // Load parameter, fallback to default if unset
     $fc_height = isset($conf['forecast_conf']['height']) ? $conf['forecast_conf']['height'] : '200';
     $fc_header = isset($conf['forecast_conf']['link']) ? $conf['forecast_conf']['link'] : 'Overcast';
-    $fc_header_css = isset($conf['forecast_conf']['linkcss']) ? $conf['forecast_conf']['linkcss'] : '';
+    $fc_color_bkg = isset($conf['forecast_conf']['color_bkg']) ? $conf['forecast_conf']['color_bkg'] : 'FFF';
+    $fc_color_txt = isset($conf['forecast_conf']['color_txt']) ? $conf['forecast_conf']['color_txt'] : '222';
     $fc_show_link = isset($conf['forecast_conf']['show']) ? $conf['forecast_conf']['show'] : 'true';
     $fc_api_key = isset($conf['forecast_conf']['api_key']) ? $conf['forecast_conf']['api_key'] : '';
-    if (strlen($fc_header_css) != 0)
-    {
-        $fc_css = "style='".$fc_header_css."'";
-    }
     $fc_link="http://forecast.io/#/f/".$lat.",".$lon;
+    $fc_color['bkg'] = '#'.$fc_color_bkg;
+    $fc_color['txt'] = '#'.$fc_color_txt;
 
     //  Init Forecast.io lib
     include('lib/forecast.io.php');
@@ -205,7 +204,7 @@ function forecast_render_element_content()
             'FORECAST_HEIGHT'	=> $fc_height,
             'FORECAST_PATH'	=> embellish_url(get_gallery_home_url().FORECAST_PATH),
             'FORECAST_NAME'	=> $fc_header,
-            'FORECAST_NAME_CSS'	=> $fc_header_css,
+            'FORECAST_COLOR'	=> $fc_color,
             'FORECAST_SHOW_LINK' => $fc_show_link,
             'FORECAST_LINK'	=> $fc_link,
             'FORECAST_DATA'     => $condition,

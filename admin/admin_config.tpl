@@ -13,18 +13,16 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
             </select>
             <br/><small>{'ADD_BEFORE_DESC'|@translate}</small>
         </li>
-<!--
         <li>
             <label>{'COLOR_BKG'|@translate} : </label>
-            <input type="text" value="{$fc.color_bkg}" name="fc_color_bkg" size="4" required/>
+            <input type="text" value="{$fc.color_bkg}" name="fc_color_bkg" size="4" id="fc_color_bkg" placeholder="#FFF" required=""/>
             <br/><small>{'COLOR_BKG_DESC'|@translate}</small>
         </li>
         <li>
             <label>{'COLOR_TEXT'|@translate} : </label>
-            <input type="text" value="{$fc.color_txt}" name="fc_color_txt" size="4" required/>
+            <input type="text" value="{$fc.color_txt}" id="fc_color_txt" name="fc_color_txt" size="4" placeholder="#222" required=""/>
             <br/><small>{'COLOR_TEXT_DESC'|@translate}</small>
         </li>
--->
 	<li>
             <label>{'UNIT'|@translate} : </label>
             <select name="fc_unit">
@@ -41,7 +39,7 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
         </li>
         <li>
             <label>{'HEADER'|@translate} : </label>
-            <input type="text" value="{$fc.link}" name="fc_link" size="30" placeholder="Forecast"/>
+            <input type="text" value="{$fc.link}" name="fc_link" size="30" placeholder="Forecast" required=""/>
             <br/><small>{'HEADER_DESC'|@translate}</small>
         </li>
         <li>
@@ -71,7 +69,23 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
 </fieldset>
 
 <p>
- <input class="submit" type="submit" name="forecast_submit" value="{'Submit'|@translate}">
+ <input class="submit" type="submit" name="forecast_config_submit" value="{'Submit'|@translate}">
 </p>
 
 </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.js"></script>
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="{$FORECAST_PATH}admin/colorpicker/jquery.colorpicker.js"></script>
+<link href="{$FORECAST_PATH}admin/colorpicker/jquery.colorpicker.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+{literal}
+$(function() {
+
+  $('#fc_color_bkg').colorpicker({ parts: 'inline', color: '{/literal}{$fc.color_bkg}{literal}' });
+  $('#fc_color_txt').colorpicker({ parts: 'inline', color: '{/literal}{$fc.color_bkg}{literal}' });
+
+});
+{/literal}
+</script>

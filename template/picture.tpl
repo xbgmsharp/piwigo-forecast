@@ -1,12 +1,21 @@
 {html_head}
 <link href="{$FORECAST_PATH}lib/forecast.css" rel="stylesheet">
 <script src="{$FORECAST_PATH}lib/skycons.js"></script>
+<style>
+#forecast-info .section {
+    color: {$FORECAST_COLOR['txt']} !important;
+    background: {$FORECAST_COLOR['bkg']} !important;
+}
+#forecast-info .section h2 {
+    color: {$FORECAST_COLOR['txt']} !important;
+}
+</style>
 {/html_head}
 
 {footer_script}
 {literal}
 // BEGIN skycons / Animate weather icons
-  var skycons = new Skycons({"color": "black"});
+  var skycons = new Skycons({"color": "{/literal}{$FORECAST_COLOR['txt']}{literal}" });
   // on Android, a nasty hack is needed: {"resizeClear": true}
 
   // you can add a canvas by it's ID...
