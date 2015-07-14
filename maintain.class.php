@@ -34,8 +34,9 @@ class forecast_maintain extends PluginMaintain {
     'show' => true,
     'api_key' => '',
     'unit' => 'auto',
-    'lang' => 'en'
-    );
+    'lang' => 'en',
+    'mode' => false
+  );
 
   function install($plugin_version, &$errors=array())
   {
