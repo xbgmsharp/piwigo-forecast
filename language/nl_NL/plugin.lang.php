@@ -38,3 +38,5 @@ $lang['SHOW_LINK_DESC'] = 'Voeg een link naar Forecast.io toe na de weer-informa
 $lang['UNIT'] = 'Eenheid';
 $lang['UNIT_DESC'] = 'Selecteer de relevante eenheid. Standaard is auto.';
 $lang['VIEW_FORECAST'] = 'Bekijk op Forecast.io';
+$lang['SHOW_MODE_DESC'] = 'Kies de grafische of tekst modus voor de widget';
+$lang['SHOW_MODE'] = 'Laat zien in grafische of tekst modus';
