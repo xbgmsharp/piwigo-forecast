@@ -38,3 +38,5 @@ $lang['SHOW_LINK_DESC'] = 'Adicionar um link após nublado para vê-lo em Foreca
 $lang['UNIT'] = 'Unidade';
 $lang['UNIT_DESC'] = 'Selecione as unidades relevantes. O padrão é auto.';
 $lang['VIEW_FORECAST'] = 'Visualizar em Forecast.io';
+$lang['SHOW_MODE'] = 'Mostrar em modo texto ou gráfico';
+$lang['SHOW_MODE_DESC'] = 'Escolha o modo gráfico ou textual para o widget';
