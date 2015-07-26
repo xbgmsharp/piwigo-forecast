@@ -38,3 +38,5 @@ $lang['COLOR_BKG'] = 'Farve, baggrund';
 $lang['COLOR_BKG_DESC'] = 'Baggrundsfarve, standard er hvid.';
 $lang['COLOR_TEXT'] = 'Farve, tekst';
 $lang['COLOR_TEXT_DESC'] = 'Farve på tekst og animeringsikon, standard er sort.';
+$lang['SHOW_MODE'] = 'Vis i grafisk eller teksttilstand';
+$lang['SHOW_MODE_DESC'] = 'Vælg grafisk eller teksttilstand til widget\'en';
