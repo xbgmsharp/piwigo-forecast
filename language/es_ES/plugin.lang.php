@@ -38,3 +38,5 @@ $lang['COLOR_TEXT_DESC'] = 'Color del texto e icono, negro por defecto';
 $lang['HEADER'] = 'Nombre del encabezado';
 $lang['HEADER_DESC'] = 'Escriba el nombre para mostrar en la parte superior el detalle escondido.';
 $lang['LANGUAGE'] = 'Idioma';
+$lang['SHOW_MODE'] = 'Mostrar en modo gráfico o texto';
+$lang['SHOW_MODE_DESC'] = 'Elige el modo gráfico o texto para el widget';
