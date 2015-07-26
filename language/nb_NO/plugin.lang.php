@@ -38,3 +38,5 @@ $lang['HEADER_DESC'] = 'Skriv inn navnet som skal vises på toppen av oversikts 
 $lang['PLG_FORECAST'] = 'Programtillegget viser en værmelding fra området bilde er tatt og dato til bilde eller video.';
 $lang['SHOW_LINK'] = 'Vis \'Se på værmelding\'';
 $lang['SHOW_LINK_DESC'] = 'Legg til en link etter overlegget for å kunne se den på Forecast.io.';
+$lang['SHOW_MODE'] = 'Vis i grafisk eller tekstmodus';
+$lang['SHOW_MODE_DESC'] = 'Velg grafikken eller tekstlig modus for utvidelsen (widget)';
