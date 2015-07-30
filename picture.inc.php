@@ -123,7 +123,7 @@ function forecast_insert_map($content, &$smarty)
     </dd>
 </div>
 {/if}
-<div id="Categories" class="imageInfo">
+<div id="'. $conf['forecast_conf']['add_before'] .'" class="imageInfo">
 ';
 
     return preg_replace($search, $replacement, $content);
