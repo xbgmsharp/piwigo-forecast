@@ -1,3 +1,10 @@
+Changes from v2.7.b to v2.7.c
+- Add options to select font and background color
+- Allow to create tag from weather condition
+- Add Text visualization mode option, Thanks to Antonello
+- Update language, thanks to the contributors
+- Initial documentation
+
 Changes from v2.7.a to v2.7.b
 - Display details weather condition (Temperature, Wind, Humidity, etc...)
 - Add configuration options (units, language, color, etc...)
