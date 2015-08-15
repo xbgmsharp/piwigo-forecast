@@ -38,3 +38,5 @@ $lang['COLOR_BKG'] = 'Bakgrundsfärg';
 $lang['API_KEY'] = 'API Nyckel';
 $lang['API_KEY_DESC'] = 'Valfri, fyll i din Forcast.io nyckel annars används proxyn.';
 $lang['ADD_BEFORE_DESC'] = 'Var väderinformationen skall placeras. ';
+$lang['SHOW_MODE'] = 'Visa i grafik- eller textläge';
+$lang['SHOW_MODE_DESC'] = 'Välj grafik- eller textläge för widgeten';
