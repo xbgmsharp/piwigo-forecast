@@ -38,3 +38,5 @@ $lang['COLOR_TEXT'] = 'Colore del testo';
 $lang['COLOR_BKG_DESC'] = 'Colore dello sfondo, bianco è quello predefinito';
 $lang['COLOR_BKG'] = 'Colore dello sfondo';
 $lang['API_KEY'] = 'chiave API';
+$lang['SHOW_MODE_DESC'] = 'Scegli la modalità grafica o testuale per il widget';
+$lang['SHOW_MODE'] = 'Mostra in modalità grafica o testuale';
