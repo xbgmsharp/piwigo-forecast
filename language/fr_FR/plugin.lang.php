@@ -20,4 +20,23 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['ADD_BEFORE'] = 'test2';
+$lang['ADD_BEFORE'] = 'Afficher la météo avant';
+$lang['HEADER'] = 'Nom du titre';
+$lang['HEADER_DESC'] = 'Saisir le nom à afficher au dessus du détail de la météo.';
+$lang['PLG_FORECAST'] = 'Ce plugin affiche les conditions météo du lieu de la photo à la date de la prise de vue.';
+$lang['SHOW_LINK_DESC'] = 'Ajouter un lien après la couverture pour l\'afficher sur Forecast.io';
+$lang['UNIT_DESC'] = 'Sélectionner l\'unité pertinente. Auto par défaut.';
+$lang['SHOW_MODE_DESC'] = 'Choisir le mode graphique ou texte pour le widget';
+$lang['SHOW_MODE'] = 'Afficher en mode graphique ou texte';
+$lang['SHOW_LINK'] = 'Afficher "Voir sur Forecast"';
+$lang['LANGUAGE'] = 'Langue';
+$lang['VIEW_FORECAST'] = 'Voir sur Forecast.io';
+$lang['UNIT'] = 'Unité';
+$lang['ADD_BEFORE_DESC'] = 'Ou afficher l\'information météo';
+$lang['API_KEY'] = 'Clé d\'API';
+$lang['API_KEY_DESC'] = 'Optionnel. Saisir la clé de l\'API Forecast.io, sinon utiliser le proxy.';
+$lang['COLOR_BKG'] = 'Couleur de l\'arrière plan';
+$lang['COLOR_BKG_DESC'] = 'Couleur de l\'arrière plan, blanc par défaut';
+$lang['COLOR_TEXT'] = 'Couleur du texte';
+$lang['COLOR_TEXT_DESC'] = 'Couleur du texte et de l\'icône animée, noir par défaut';
+$lang['LANGUAGE_DESC'] = 'Sélectionner la langue souhaitée. Merci de noter que les unités du résumé seront en accord avec l\'option des unités ci-dessus. Veillez à coordonner les options comme il se doit.';
