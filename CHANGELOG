@@ -1,3 +1,8 @@
+Changes from v2.7.c to v2.8.a
+- Added Norwegian Bokmål, Cornish, Icelandic, Czech, Hungarian, Serbian, Croatian and traditional Chinese to the list of supported languages.
+- Update language, thanks to the contributors
+- Update documentation
+
 Changes from v2.7.b to v2.7.c
 - Add options to select font and background color
 - Allow to create tag from weather condition
