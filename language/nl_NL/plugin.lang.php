@@ -20,23 +20,23 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['ADD_BEFORE'] = 'Geef weer-informatie weer voor';
-$lang['ADD_BEFORE_DESC'] = 'Waar dient de weer-informatie weergegeven te worden?';
+$lang['ADD_BEFORE'] = 'Voeg weer-informatie toe voordat';
+$lang['ADD_BEFORE_DESC'] = 'Waar wordt de weer-informatie getoond?';
 $lang['API_KEY'] = 'API sleutel';
-$lang['API_KEY_DESC'] = 'Optioneel, voer uw Forecast.io API sleutel in, of gebruik de procy.';
+$lang['API_KEY_DESC'] = 'Optioneel, voer je Forecast.io API sleutel in, of gebruik de proxy.';
 $lang['COLOR_BKG'] = 'Kleur achtergrond';
 $lang['COLOR_BKG_DESC'] = 'Kleur van de achtergrond, standaard is wit.';
 $lang['COLOR_TEXT'] = 'Kleur tekst';
 $lang['COLOR_TEXT_DESC'] = 'Kleur van de tekst en animatie-ikoon, standaard is zwart.';
 $lang['HEADER'] = 'Tekst van de kopregel';
-$lang['HEADER_DESC'] = 'Tekst die boven de voorspelling weergegeven dient te worden.';
+$lang['HEADER_DESC'] = 'Type de tekst die boven bij bewolkt getoond moet worden.';
 $lang['LANGUAGE'] = 'Taal';
-$lang['LANGUAGE_DESC'] = 'Selecteer de gewenste taal. NB Eenheden in de samenvatting worden weergegeven op basis van de hierboven ingestelde Eenheid-optie. Stel dus beide opties in, indien noodzakelijk.';
-$lang['PLG_FORECAST'] = 'Deze plugin geeft weer-informatie aan de hand van de locatie en datum van een afbeelding of video.';
-$lang['SHOW_LINK'] = 'Geef weer \'Bekijk bij weer-informatie\'';
-$lang['SHOW_LINK_DESC'] = 'Voeg een link naar Forecast.io toe na de weer-informatie.';
+$lang['LANGUAGE_DESC'] = 'Selecteer de gewenste taal. NB Eenheden in de samenvatting worden getoond op basis van de hierboven ingestelde Eenheid-optie. Stel dus, indien noodzakelijk, beide opties in.';
+$lang['PLG_FORECAST'] = 'Deze plugin toont weer-informatie aan de hand van de locatie en datum van een afbeelding of video.';
+$lang['SHOW_LINK'] = 'Toon \'Kijk bij verwachting\'';
+$lang['SHOW_LINK_DESC'] = 'Voeg een link toe na bewolkt om het te bekijken op  Forecast.io.';
 $lang['UNIT'] = 'Eenheid';
 $lang['UNIT_DESC'] = 'Selecteer de relevante eenheid. Standaard is auto.';
 $lang['VIEW_FORECAST'] = 'Bekijk op Forecast.io';
-$lang['SHOW_MODE_DESC'] = 'Kies de grafische of tekst modus voor de widget';
-$lang['SHOW_MODE'] = 'Laat zien in grafische of tekst modus';
+$lang['SHOW_MODE_DESC'] = 'Kies de grafische- of tekstmodus voor het onderdeel';
+$lang['SHOW_MODE'] = 'Toon in grafische- of tekstmodus';
