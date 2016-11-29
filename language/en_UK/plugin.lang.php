@@ -13,9 +13,10 @@ $lang['COLOR_TEXT_DESC'] = "Color of the text and animate icon, default is black
 $lang['HEADER'] = "Name of the header";
 $lang['HEADER_DESC'] = "Type the name to display on top of the overcast detail.";
 $lang['SHOW_LINK'] = "Display 'View on Forecast'";
-$lang['SHOW_LINK_DESC'] = "Add a link after the overcast to view it on Forecast.io.";
+$lang['SHOW_LINK_DESC'] = "Add a link after the overcast to view it on DarkSky.net.";
 $lang['SHOW_MODE'] = "Show in graphical or textual mode";
 $lang['SHOW_MODE_DESC'] = "Choose the graphical or textual mode for the widget";
-$lang['VIEW_FORECAST'] = "View on Forecast.io";
+$lang['VIEW_FORECAST'] = "View on DarkSky.net";
 $lang['API_KEY'] = "API KEY";
-$lang['API_KEY_DESC'] = "Optional, input your Forecast.io API KEY otherwise use the proxy.";
+$lang['API_KEY_DESC'] = "Optional, input your DarkSky.net API KEY otherwise use the proxy.";
+$lang['FORECAST_PLUGIN_BY'] = 'Plugin by <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';

@@ -20,9 +20,10 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['API_KEY_DESC'] = 'Optional, input your Forecast.io API KEY, or use the proxy.';
+$lang['API_KEY_DESC'] = 'Optional, input your DarkSky.net API KEY, or use the proxy.';
 $lang['COLOR_BKG_DESC'] = 'Background color (default white)';
 $lang['COLOR_TEXT'] = 'Text color';
 $lang['COLOR_TEXT_DESC'] = 'Text and icon animation color (default black)';
 $lang['LANGUAGE_DESC'] = 'Select the desired language. Please note that units in the summary will be set according to the units option above, so be sure to set both options as needed.';
 $lang['PLG_FORECAST'] = 'This plugin displays forecast conditions based on the date and location of an image or video.';
+$lang['FORECAST_PLUGIN_BY'] = 'Plugin by <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';

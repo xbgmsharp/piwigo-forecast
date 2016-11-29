@@ -21,19 +21,19 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['ADD_BEFORE'] = 'Tilføj vejr før';
-$lang['VIEW_FORECAST'] = 'Se hos Forecast.io';
+$lang['VIEW_FORECAST'] = 'Se hos DarkSky.net';
 $lang['HEADER'] = 'Headers navn';
 $lang['HEADER_DESC'] = 'Angiv navn der skal vises oven på overskyet-detaljer.';
 $lang['LANGUAGE'] = 'Sprog';
 $lang['LANGUAGE_DESC'] = 'Vælg det ønskede sprog. Vær opmærksom på, at enheder i resumet vil blive opsat jævnfør enhedsopsætningen oven for, så sørg for at opsætte begge indstillinger som ønsket.';
 $lang['PLG_FORECAST'] = 'Plugin\'en viser vejrudsigtsforhold ud fra et billedes eller videos placering og dato.';
 $lang['SHOW_LINK'] = 'Vis "Se hos Forecast".';
-$lang['SHOW_LINK_DESC'] = 'Tilføj et link efter gråvejret for at se det hos Forecast.io.';
+$lang['SHOW_LINK_DESC'] = 'Tilføj et link efter gråvejret for at se det hos DarkSky.net.';
 $lang['UNIT'] = 'Enhed';
 $lang['UNIT_DESC'] = 'Vælg de relevante enheder. Standard er auto.';
 $lang['ADD_BEFORE_DESC'] = 'Hvor vejroplysninger skal vises.';
 $lang['API_KEY'] = 'API-nøgle';
-$lang['API_KEY_DESC'] = 'Valgfri, angiv din API-nøgle til Forecast.io eller brug proxy\'en.';
+$lang['API_KEY_DESC'] = 'Valgfri, angiv din API-nøgle til DarkSky.net eller brug proxy\'en.';
 $lang['COLOR_BKG'] = 'Farve, baggrund';
 $lang['COLOR_BKG_DESC'] = 'Baggrundsfarve, standard er hvid.';
 $lang['COLOR_TEXT'] = 'Farve, tekst';

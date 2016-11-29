@@ -22,7 +22,7 @@
 // +-----------------------------------------------------------------------+
 $lang['UNIT'] = 'Enhet';
 $lang['UNIT_DESC'] = 'Velg relevante enheter. Standard er auto.';
-$lang['VIEW_FORECAST'] = 'Vis på Forecast.io';
+$lang['VIEW_FORECAST'] = 'Vis på DarkSky.net';
 $lang['HEADER'] = 'Navn på toptekst';
 $lang['LANGUAGE'] = 'Språk';
 $lang['LANGUAGE_DESC'] = 'Velg ønsket språk. Pass på at enheter i oppsummeringen blir satt samtidig med enhetsvalgene, ovenfor, så pass på at begge er satt riktig.';
@@ -31,12 +31,12 @@ $lang['COLOR_BKG_DESC'] = 'Bakgrunnsfarge, standard er hvit';
 $lang['COLOR_TEXT'] = 'Farge på tekst';
 $lang['COLOR_BKG'] = 'Bakgrunnsfarge';
 $lang['API_KEY'] = 'API Nøkkel';
-$lang['API_KEY_DESC'] = 'Valgfritt, tast inn din Forecast.io API nøkkel eller bruk proxy';
+$lang['API_KEY_DESC'] = 'Valgfritt, tast inn din DarkSky.net API nøkkel eller bruk proxy';
 $lang['ADD_BEFORE_DESC'] = 'Hvor skal værinnformasjonen vises';
 $lang['ADD_BEFORE'] = 'Legg til været før';
 $lang['HEADER_DESC'] = 'Skriv inn navnet som skal vises på toppen av oversikts detaljene.';
 $lang['PLG_FORECAST'] = 'Programtillegget viser en værmelding fra området bilde er tatt og dato til bilde eller video.';
 $lang['SHOW_LINK'] = 'Vis \'Se på værmelding\'';
-$lang['SHOW_LINK_DESC'] = 'Legg til en link etter overlegget for å kunne se den på Forecast.io.';
+$lang['SHOW_LINK_DESC'] = 'Legg til en link etter overlegget for å kunne se den på DarkSky.net.';
 $lang['SHOW_MODE'] = 'Vis i grafisk eller tekstmodus';
 $lang['SHOW_MODE_DESC'] = 'Velg grafikken eller tekstlig modus for utvidelsen (widget)';

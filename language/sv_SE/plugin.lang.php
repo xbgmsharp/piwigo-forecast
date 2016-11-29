@@ -21,7 +21,7 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['HEADER'] = 'Rubrik';
-$lang['VIEW_FORECAST'] = 'Visa på Forcast.io';
+$lang['VIEW_FORECAST'] = 'Visa på DarkSky.net';
 $lang['SHOW_LINK'] = 'Visa \'Visa på Forecast\'';
 $lang['PLG_FORECAST'] = 'Denna tilläggsmodul visar en väderprognos från ort och datum på ett foto eller en video. ';
 $lang['LANGUAGE_DESC'] = 'Välj önskat språk. Notera att enhet i summeringen kommer att sättas enligt enhetsvalet ovan, så sätt båda valen.';

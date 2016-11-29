@@ -20,14 +20,14 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['VIEW_FORECAST'] = 'Vista su Forecast.io';
+$lang['VIEW_FORECAST'] = 'Vista su DarkSky.net';
 $lang['UNIT_DESC'] = 'Seleziona le unità rilevanti. Il predefinito è auto';
-$lang['SHOW_LINK_DESC'] = 'Aggiungi un link dopo il cielo coperto per vederlo su Forecast.io.';
+$lang['SHOW_LINK_DESC'] = 'Aggiungi un link dopo il cielo coperto per vederlo su DarkSky.net.';
 $lang['PLG_FORECAST'] = 'Questo plugin visualizza le condizioni meteo del luogo e la data di un immagine o video';
 $lang['LANGUAGE_DESC'] = 'Selezionare la lingua desiderata. Si prega di notare che le voci nel sommario saranno impostati in base all\'opzione scelta sopra, quindi assicuratevi di impostare entrambe le opzioni a seconda delle necessità.';
 $lang['HEADER_DESC'] = 'Scrivi il nome da visualizzare sopra il dettagio della nuvolosità';
 $lang['HEADER'] = 'Intestazione';
-$lang['API_KEY_DESC'] = 'Opzionale, inserisci la tua Forecast.io API KEY altrimenti usa il proxy';
+$lang['API_KEY_DESC'] = 'Opzionale, inserisci la tua DarkSky.net API KEY altrimenti usa il proxy';
 $lang['ADD_BEFORE_DESC'] = 'Dove visualizzare le informazioni meteo';
 $lang['ADD_BEFORE'] = 'Aggiungi il meteo prima';
 $lang['LANGUAGE'] = 'Lingua';

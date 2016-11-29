@@ -20,8 +20,8 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['VIEW_FORECAST'] = 'Просмотр на Forecast.io';
-$lang['SHOW_LINK_DESC'] = 'Добавить ссылку для просмотра на Forecast.io.';
+$lang['VIEW_FORECAST'] = 'Просмотр на DarkSky.net';
+$lang['SHOW_LINK_DESC'] = 'Добавить ссылку для просмотра на DarkSky.net.';
 $lang['HEADER_DESC'] = 'Введите имя для отображения сверху.';
 $lang['UNIT'] = 'Единицы измерения';
 $lang['UNIT_DESC'] = 'Выберите подходящие единицы измерения. По умолчанию выбор автоматический.';
@@ -33,7 +33,7 @@ $lang['API_KEY'] = 'API KEY';
 $lang['ADD_BEFORE'] = 'Сначала добавить местоположение';
 $lang['ADD_BEFORE_DESC'] = 'Где отображать информацию о местоположении.';
 $lang['COLOR_BKG'] = 'Цвет фона';
-$lang['API_KEY_DESC'] = 'Дополнительно, введите Ваш Forecast.io API KEY, в противном случае используется прокси.';
+$lang['API_KEY_DESC'] = 'Дополнительно, введите Ваш DarkSky.net API KEY, в противном случае используется прокси.';
 $lang['HEADER'] = 'Имя заголовка';
 $lang['COLOR_TEXT'] = 'Цвет текста';
 $lang['LANGUAGE'] = 'Язык';

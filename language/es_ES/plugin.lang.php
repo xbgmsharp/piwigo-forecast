@@ -23,14 +23,14 @@
 $lang['LANGUAGE_DESC'] = 'Seleccione el idioma deseado. Tenga en cuenta que las unidades en el resumen se establecerán de acuerdo con la opción de unidades, arriba, así que asegúrese de configurar las dos opciones, según sea necesario.';
 $lang['PLG_FORECAST'] = 'Este plugin muestra información local y fecha a partir de una imagen o vídeo.';
 $lang['SHOW_LINK'] = 'Mostrar "Visto en previsión"';
-$lang['SHOW_LINK_DESC'] = 'Añadir un enlace después para visualizarlo en Forecast.io.';
+$lang['SHOW_LINK_DESC'] = 'Añadir un enlace después para visualizarlo en DarkSky.net.';
 $lang['UNIT'] = 'Unidad';
 $lang['UNIT_DESC'] = 'Seleccióna la unidad adecuada. "Auto" por defecto';
-$lang['VIEW_FORECAST'] = 'Visto en "Forecast.io';
+$lang['VIEW_FORECAST'] = 'Visto en "DarkSky.net';
 $lang['ADD_BEFORE'] = 'Añadir ubicación antes';
 $lang['ADD_BEFORE_DESC'] = 'Donde mostrar la información de ubicación.';
 $lang['API_KEY'] = 'Clave API';
-$lang['API_KEY_DESC'] = 'Opcional, ingrese su clave de API Forecast.io otra manera, es utilizar el proxy.';
+$lang['API_KEY_DESC'] = 'Opcional, ingrese su clave de API DarkSky.net otra manera, es utilizar el proxy.';
 $lang['COLOR_BKG'] = 'Color de fondo';
 $lang['COLOR_BKG_DESC'] = 'Color de fondo, blanco por defecto';
 $lang['COLOR_TEXT'] = 'Color del texto';
