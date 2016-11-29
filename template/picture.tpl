@@ -2,11 +2,11 @@
 <link href="{$FORECAST_PATH}lib/forecast.css" rel="stylesheet">
 <script src="{$FORECAST_PATH}lib/skycons.js"></script>
 <style>
-#forecast-info .section {
+#forecast-info .fc-section {
     color: {$FORECAST_COLOR['txt']} !important;
     background: {$FORECAST_COLOR['bkg']} !important;
 }
-#forecast-info .section h2 {
+#forecast-info .fc-section .fc-h2 {
     color: {$FORECAST_COLOR['txt']} !important;
 }
 </style>
@@ -42,9 +42,9 @@
 
 // Jquery helper
 $(document).ready(function () {
-    $(document).on('click', '.inner', function () {
-	$( "div.current_container" ).toggleClass( "show_more" );
-	var el = $("span.more_button");
+    $(document).on('click', '.fc-inner', function () {
+	$( "div.fc-current_container" ).toggleClass( "fc-show_more" );
+	var el = $("span.fc-more_button");
   	el.text(el.text() === "-" ? "+" : "-");
     });
 });

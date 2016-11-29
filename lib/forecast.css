@@ -21,31 +21,26 @@
   src: url("fonts/AvenirNextLTW01-BoldCn.woff") format("woff");
 }
 
-#forecast-info .avenir {
+#forecast-info .fc-avenir {
   font-family: "AvenirNextCondensed-Regular", "AvenirNextLTW01-Condens 721299", "Arial Narrow", Verdana, sans-serif;
   font-weight: 400;
 }
-#forecast-info .avenir_medium {
+#forecast-info .fc-avenir_medium {
   font-family: "AvenirNextCondensed-Medium", "AvenirNextLTW01-MediumC 721311", "Arial Narrow", Verdana, sans-serif;
 }
-#forecast-info .avenir_demi {
+#forecast-info .fc-avenir_demi {
   font-family: "AvenirNextCondensed-DemiBold", "AvenirNextLTW01-DemiCn", "Arial Narrow", Verdana, sans-serif;
 }
-#forecast-info .avenir_bold {
+#forecast-info .fc-avenir_bold {
   font-family: "AvenirNextCondensed-Bold", "AvenirNextLTW01-BoldCn", "Arial Narrow", Verdana, sans-serif;
 }
-#forecast-info .pictos {
+#forecast-info .fc-pictos {
     font-family: "Pictos";
 }
 
 #forecast-info {
-  /*float: left;*/
-  /*visibility: hidden;*/
-  /*width: 275px;*/
-  width: 280px;
-  /*margin: 0 0 10px 75px;*/
 }
-#forecast-info .section {
+#forecast-info .fc-section {
   display: table;
   position: relative;
   width: 100%;
@@ -53,21 +48,20 @@
   color: #222;
   background: #FFF;
 }
-#forecast-info .section > .inner {
+#forecast-info .fc-section > .fc-inner {
   display: table-cell;
   vertical-align: middle;
   padding: 10px 0;
 }
-#forecast-info .section.currently {
+#forecast-info .fc-section.fc-currently {
   height: 125px;
-  /*margin: 40px 0 10px 0;*/
   cursor: pointer;
 }
-#forecast-info .section.currently .current_container {
+#forecast-info .fc-section.fc-currently .fc-current_container {
   position: relative;
   margin-top: -10px;
 }
-#forecast-info .section.currently .current_container .less {
+#forecast-info .fc-section.fc-currently .fc-current_container .fc-less {
   position: relative;
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -76,8 +70,11 @@
   -o-transition: opacity 0.1s linear;
   transition: opacity 0.1s linear;
   line-height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
-#forecast-info .section.currently .current_container .more {
+#forecast-info .fc-section.fc-currently .fc-current_container .fc-more {
   position: absolute;
   opacity: 0;
   -webkit-transition: opacity 0.1s linear;
@@ -85,44 +82,41 @@
   -o-transition: opacity 0.1s linear;
   transition: opacity 0.1s linear;
   top: 14px;
-  font-size: 16px;
+  font-size: 14px;
+  width: 100%;
 }
-#forecast-info .section.currently .current_container .more .temps .m {
+#forecast-info .fc-section.fc-currently .fc-current_container .fc-more .fc-temps .fc-m {
   font-family: "AvenirNextCondensed-Medium", "AvenirNextLTW01-MediumC 721311", "Arial Narrow", Verdana, sans-serif;
 }
-#forecast-info .section.currently .current_container .more .temps {
+#forecast-info .fc-section.fc-currently .fc-current_container .fc-more .fc-temps {
   position: absolute;
-  /*left: 156px;*/
-  left: 160px;
   right: 0;
-  /*width: 135px;*/
-  width: 110px;
+  width: 35%;
   margin-top: 4px;
 }
-#forecast-info .section.currently .current_container .more .temps .high_low {
+#forecast-info .fc-section.fc-currently .fc-current_container .fc-more .fc-temps .fc-high_low {
   margin-top: 12px;
 }
-#forecast-info .section.currently .current_container .more .table {
+#forecast-info .fc-section.fc-currently .fc-current_container .fc-more .fc-table {
   position: absolute;
   left: 0;
   right: 0;
-  /*width: 146px;*/
-  width: 156px;
+  width: 60%;
   border-right: 1px dashed #666;
 }
-#forecast-info .section.currently .current_container .more .label {
+#forecast-info .fc-section.fc-currently .fc-current_container .fc-more .fc-label {
   display: inline-block;
   width: 68px;
   font-family: "AvenirNextCondensed-Bold", "AvenirNextLTW01-BoldCn", "Arial Narrow", Verdana, sans-serif;
   text-align: left;
 }
-#forecast-info .section.currently .current_container.show_more .more {
+#forecast-info .fc-section.fc-currently .fc-current_container.fc-show_more .fc-more {
   opacity: 1;
 }
-#forecast-info .section.currently .current_container.show_more .less {
+#forecast-info .fc-section.fc-currently .fc-current_container.fc-show_more .fc-less {
   opacity: 0;
 }
-#forecast-info .section.currently .more_button {
+#forecast-info .fc-section.fc-currently .fc-more_button {
   font-size: 20px;
   position: relative;
   top: -2px;
@@ -133,37 +127,33 @@
   -o-transition: opacity 0.1s linear;
   transition: opacity 0.1s linear;
 }
-#forecast-info .section.currently:hover .more_button {
+#forecast-info .fc-section.fc-currently:hover .fc-more_button {
   opacity: 0.9;
 }
-#forecast-info.precip .section.currently {
+#forecast-info.precip .fc-section.fc-currently {
   margin-top: 0;
 }
-#forecast-info.alerts .section.currently {
+#forecast-info.alerts .fc-section.fc-currently {
   margin-top: 0;
 }
-#forecast-info .section h2 {
-  /*width: 100%;*/
+#forecast-info .fc-section .fc-h2 {
   height: 40px;
   line-height: 40px;
   font-family: "AvenirNextCondensed-Medium", "AvenirNextLTW01-MediumC 721311", "Arial Narrow", Verdana, sans-serif;
-  /*font-size: 28px;*/
   font-size: 18px;
-  /*text-align: left;*/
   text-align: center;
   color: #222;
 }
-#forecast-info .section .desc {
+#forecast-info .fc-section .fc-desc {
   font-family: "AvenirNextCondensed-Regular", "AvenirNextLTW01-Condens 721299", "Arial Narrow", Verdana, sans-serif;
   font-weight: 400;
   font-size: 20px;
-  text-align: left;
 }
-#forecast-info .section.currently .desc {
+#forecast-info .fc-section.fc-currently .fc-desc {
   line-height: 1.2em;
   margin-top: 2px;
 }
-#forecast-info .section.currently .temp {
+#forecast-info .fc-section.fc-currently .fc-temp {
   display: inline-block;
   margin-top: 62px;
   font-size: 78px;
@@ -171,7 +161,7 @@
   line-height: 0;
   height: 0;
 }
-#forecast-info .section.currently .temp .dir {
+#forecast-info .fc-section.fc-currently .fc-temp .fc-dir {
   position: relative;
   left: -18px;
   top: -7px;
@@ -180,7 +170,7 @@
   line-height: 0;
   font-family: "Pictos";
 }
-#forecast-info .windicator {
+#forecast-info .fc-windicator {
   margin-top: -1px;
   margin-left: 2px;
   width: 22px;
@@ -191,31 +181,31 @@
   background-size: 22px 180px;
   opacity: 0.8;
 }
-#forecast-info .windicator.frame_0 {
+#forecast-info .fc-windicator.frame_0 {
   background-position: 0 0;
 }
-#forecast-info .windicator.frame_1 {
+#forecast-info .fc-windicator.frame_1 {
   background-position: 0 -22.5px;
 }
-#forecast-info .windicator.frame_2 {
+#forecast-info .fc-windicator.frame_2 {
   background-position: 0 -45px;
 }
-#forecast-info .windicator.frame_3 {
+#forecast-info .fc-windicator.frame_3 {
   background-position: 0 -67.5px;
 }
-#forecast-info .windicator.frame_4 {
+#forecast-info .fc-windicator.frame_4 {
   background-position: 0 -90px;
 }
-#forecast-info .windicator.frame_5 {
+#forecast-info .fc-windicator.frame_5 {
   background-position: 0 -112.5px;
 }
-#forecast-info .windicator.frame_6 {
+#forecast-info .fc-windicator.frame_6 {
   background-position: 0 -135px;
 }
-#forecast-info .windicator.frame_7 {
+#forecast-info .fc-windicator.frame_7 {
   background-position: 0 -157.5px;
 }
-#forecast-info .section.currently #icon_current {
+#forecast-info .fc-section.fc-currently #icon_current {
   display: inline-block;
   vertical-align: top;
   margin: 11px 0 0 0;

@@ -63,43 +63,43 @@ function forecast_insert_map($content, &$smarty)
     } else {
 
         $replacement .= '
-            <section class="currently section">
-              <div class="inner">
-                <h2>{$FORECAST_DATA->time}<span class="more_button pictos">+</span></h2>
+            <section class="fc-currently fc-section">
+              <div class="fc-inner">
+                <h2 class="fc-h2">{$FORECAST_DATA->time}<span class="fc-more_button fc-pictos">+</span></h2>
 
-                <div class="current_container">
-                  <div class="less">
+                <div class="fc-current_container">
+                  <div class="fc-less">
                     <canvas id="icon_current" width="164" height="164" style="width:82px; height: 82px"></canvas>
-                    <div class="temp"><span>{$FORECAST_DATA->temperatureMax}</span></div>
-                    <div class="desc">{$FORECAST_DATA->summary}</div>
+                    <div class="fc-temp"><span>{$FORECAST_DATA->temperatureMax}</span></div>
+                    <div class="fc-desc">{$FORECAST_DATA->summary}</div>
                   </div>
 
-                  <div class="more">
-                    <div class="temps">
-                      <div class="dir m">Sun rose at <span class="m">{$FORECAST_DATA->sunriseTime}</span><br>and set at <span class="m">{$FORECAST_DATA->sunsetTime}</span>.</div>
-                      <div class="high_low">Low, <span class="m">{$FORECAST_DATA->temperatureMin}</span> at <span class="m">{$FORECAST_DATA->temperatureMinTime}</span>,<br>High, <span class="m">{$FORECAST_DATA->temperatureMax}</span> at <span class="m">{$FORECAST_DATA->temperatureMaxTime}</span>.</div>
+                  <div class="fc-more">
+                    <div class="fc-temps">
+                      <div class="fc-dir fc-m">Sun rose at <span class="fc-m">{$FORECAST_DATA->sunriseTime}</span><br>and set at <span class="fc-m">{$FORECAST_DATA->sunsetTime}</span>.</div>
+                      <div class="high_low">Low, <span class="fc-m">{$FORECAST_DATA->temperatureMin}</span> at <span class="fc-m">{$FORECAST_DATA->temperatureMinTime}</span>,<br>High, <span class="fc-m">{$FORECAST_DATA->temperatureMax}</span> at <span class="fc-m">{$FORECAST_DATA->temperatureMaxTime}</span>.</div>
                     </div>
 
-                    <div class="table">
-                      <div class="wind">
-                        <span class="label">Wind:</span>
-                        <span class="val">{$FORECAST_DATA->windSpeed}<div class="windicator {$FORECAST_DATA->windFrame}" "="" title="{$FORECAST_DATA->windSpeed} winds from the {$FORECAST_DATA->windDirection}"></div></span>
+                    <div class="fc-table">
+                      <div class="fc-wind">
+                        <span class="fc-label">Wind:</span>
+                        <span class="fc-val">{$FORECAST_DATA->windSpeed}<div class="fc-windicator {$FORECAST_DATA->windFrame}" "="" title="{$FORECAST_DATA->windSpeed} winds from the {$FORECAST_DATA->windDirection}"></div></span>
                       </div>
-                      <div class="humidity">
-                        <span class="label">Humidity:</span>
-                        <span class="val">{$FORECAST_DATA->humidity}</span>
+                      <div class="fc-humidity">
+                        <span class="fc-label">Humidity:</span>
+                        <span class="fc-val">{$FORECAST_DATA->humidity}</span>
                       </div>
-                      <div class="dewpoint">
-                        <span class="label">Dew Pt:</span>
-                        <span class="val">{$FORECAST_DATA->dewPoint}</span>
+                      <div class="fc-dewpoint">
+                        <span class="fc-label">Dew Pt:</span>
+                        <span class="fc-val">{$FORECAST_DATA->dewPoint}</span>
                       </div>
-                      <div class="visibility">
-                        <span class="label">Visibility:</span>
-                        <span class="val">{$FORECAST_DATA->visibility}</span>
+                      <div class="fc-visibility">
+                        <span class="fc-label">Visibility:</span>
+                        <span class="fc-val">{$FORECAST_DATA->visibility}</span>
                       </div>
-                      <div class="pressure">
-                        <span class="label">Pressure:</span>
-                        <span class="val">{$FORECAST_DATA->pressure}</span>
+                      <div class="fc-pressure">
+                        <span class="fc-label">Pressure:</span>
+                        <span class="fc-val">{$FORECAST_DATA->pressure}</span>
                       </div>
                     </div>
                   </div>
@@ -113,8 +113,8 @@ function forecast_insert_map($content, &$smarty)
     $replacement .= '
         <div id="forecast_attrib" style="visibility: hidden; display: none;">
             <ul>
-                <li>{"PLUGIN_BY"|@translate}</li>
-                <li><a href="http://forecast.io/" target="_blank">Powered by Forecast</a></li>
+                <li>{"FORECAST_PLUGIN_BY"|@translate}</li>
+                <li><a href="http://DarkSky.net/" target="_blank">Powered by DarkSky</a></li>
             </ul>
         </div>
         {if $FORECAST_SHOW_LINK}
@@ -161,7 +161,7 @@ function forecast_render_element_content()
     $fc_color_txt = isset($conf['forecast_conf']['color_txt']) ? $conf['forecast_conf']['color_txt'] : '222';
     $fc_show_link = isset($conf['forecast_conf']['show']) ? $conf['forecast_conf']['show'] : 'true';
     $fc_api_key = isset($conf['forecast_conf']['api_key']) ? $conf['forecast_conf']['api_key'] : '';
-    $fc_link="http://forecast.io/#/f/".$lat.",".$lon;
+    $fc_link="https://darksky.net/forecast/".$lat.",".$lon;
     $fc_color['bkg'] = '#'.$fc_color_bkg;
     $fc_color['txt'] = '#'.$fc_color_txt;
 
