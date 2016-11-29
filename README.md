@@ -39,7 +39,7 @@ Help me improve the plugin, rate my [plugin](http://piwigo.org/ext/extension_vie
 Thanks
 -----
 
-* [forecast.io](http://forecast.io/)
+* [DarkSky](https://darksky.net)
 * [skycons](https://darkskyapp.github.io/skycons/)
 
 Licence
