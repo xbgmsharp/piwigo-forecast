@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Forecast
-Version: 2.8.a
-Description: Forecast.io integration for Piwigo
+Version: 2.8.b
+Description: Forecast.io/DarkSky.net integration for Piwigo
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=795
 Author: xbmgsharp
 Author URI: https://github.com/xbgmsharp/piwigo-forecast

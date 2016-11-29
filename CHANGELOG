@@ -1,5 +1,11 @@
+Changes from v2.8.a to v2.8.b
+- Update brand from Forecast.io to DarkSky.net (re-brand)
+- Improve CSS to suport different template
+- Update language, thanks to the contributors
+
 Changes from v2.7.c to v2.8.a
-- Added Norwegian Bokmål, Cornish, Icelandic, Czech, Hungarian, Serbian, Croatian and traditional Chinese to the list of supported languages.
+- Fix Right Panel Layout Broken
+- Added many languages to the list of supported languages.
 - Update language, thanks to the contributors
 - Update documentation
 
