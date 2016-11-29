@@ -58,12 +58,12 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
 </fieldset>
 
 <fieldset>
-   <legend>{'API Forecast.io'|@translate}</legend>
+   <legend>{'API DarkSky.net'|@translate}</legend>
     <ul>
         <li>
             <label>{'API_KEY'|@translate} : </label>
-            <input type="text" value="{$fc.api_key}" name="fc_api_key" size="60" placeholder="forecast.io API KEY"/>
-            <br/><small>{'API_KEY_DESC'|@translate}</small>
+            <input type="text" value="{$fc.api_key}" name="fc_api_key" size="60" placeholder="DarkSky.net API KEY"/>
+            <br/><small>{'API_KEY_DESC'|@translate} <a target="_blanck" href="https://github.com/xbgmsharp/nodejs-forecast">nodejs-forecast</a></small>
         </li>
     </ul>
 </fieldset>
