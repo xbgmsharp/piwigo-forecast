@@ -75,7 +75,8 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-forecast/wiki" target=
 	<ul>
 		<li>
 			<label>
-				<input type="text" name="fc_taggroup" value="weather" placeholder="weather" required="" /> {'Name of the tag group'|@translate}
+				{'Name of the tag group'|@translate} :
+				<input type="text" name="fc_taggroup" value="{$sync_options.fc_tag_group}" placeholder="weather" required="" size="30"/>
 			</label>
 			<br/><small>Tag can be one of the following values: clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, or partly-cloudy-night</small>
 		</li>

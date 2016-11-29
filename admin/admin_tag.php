@@ -169,6 +169,7 @@ $template->assign(
 	array(
 		'SUBCATS_INCLUDED_CHECKED' 	=> $sync_options['subcats_included'] ? 'checked="checked"' : '',
 		'NB_GEOTAGGED' 			=> $nb_geotagged,
+		'sync_options'			=> $sync_options
 	)
 );
 
