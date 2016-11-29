@@ -4,7 +4,7 @@
  * Helper Class for forecast.io webservice
  * from https://github.com/tobias-redmann/forecast.io-php-api/
  * Update by xbgmsharp to support https://github.com/xbgmsharp/nodejs-forecast
- * https://developer.forecast.io/docs/v2
+ * https://darksky.net/dev/docs
  */
 class ForecastIO
 {
@@ -12,7 +12,7 @@ class ForecastIO
     private $api_key;
     private $units;
     private $language;
-    const API_ENDPOINT = 'https://api.forecast.io/forecast/';
+    const API_ENDPOINT = 'https://api.darksky.net/forecast/';
 
    /**
     * xbgmsharp update
