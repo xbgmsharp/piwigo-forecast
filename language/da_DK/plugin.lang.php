@@ -40,3 +40,4 @@ $lang['COLOR_TEXT'] = 'Farve, tekst';
 $lang['COLOR_TEXT_DESC'] = 'Farve på tekst og animeringsikon, standard er sort.';
 $lang['SHOW_MODE'] = 'Vis i grafisk eller teksttilstand';
 $lang['SHOW_MODE_DESC'] = 'Vælg grafisk eller teksttilstand til widget\'en';
+$lang['FORECAST_PLUGIN_BY'] = 'Plugin af <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
