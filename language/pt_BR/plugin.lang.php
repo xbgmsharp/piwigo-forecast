@@ -40,3 +40,4 @@ $lang['UNIT_DESC'] = 'Selecione as unidades relevantes. O padrão é auto.';
 $lang['VIEW_FORECAST'] = 'Visualizar em DarkSky.net';
 $lang['SHOW_MODE'] = 'Mostrar em modo texto ou gráfico';
 $lang['SHOW_MODE_DESC'] = 'Escolha o modo gráfico ou textual para o widget';
+$lang['FORECAST_PLUGIN_BY'] = 'Plugin por <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
