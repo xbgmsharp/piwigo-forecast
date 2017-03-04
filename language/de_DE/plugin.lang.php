@@ -40,3 +40,4 @@ $lang['HEADER_DESC'] = 'Name eingeben, der oberhalb der Wetterinformation angeze
 $lang['LANGUAGE_DESC'] = 'Gewünschte Sprache wählen. Hinweis: Einheiten werden in der Übersicht gemäß den Einheiten-Einstellungen angezeigt, so dass entsprechend beide Optionen konfiguriert werden müssen.';
 $lang['PLG_FORECAST'] = 'Dieses Plug-in zeigt die Wetterbedingungen zum Zeitpunkt und Ort eines Bildes oder Videos an.';
 $lang['SHOW_LINK_DESC'] = 'Einen Wetter-Link hinzufügen, der auf DarkSky.net angezeigt wird.';
+$lang['FORECAST_PLUGIN_BY'] = 'Plugin von <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
