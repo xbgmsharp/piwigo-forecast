@@ -40,3 +40,4 @@ $lang['UNIT_DESC'] = 'Selecteer de relevante eenheid. Standaard is auto.';
 $lang['VIEW_FORECAST'] = 'Bekijk op DarkSky.net';
 $lang['SHOW_MODE_DESC'] = 'Kies de grafische- of tekstmodus voor het onderdeel';
 $lang['SHOW_MODE'] = 'Toon in grafische- of tekstmodus';
+$lang['FORECAST_PLUGIN_BY'] = 'Plugin door <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
