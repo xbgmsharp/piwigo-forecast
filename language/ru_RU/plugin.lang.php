@@ -40,3 +40,4 @@ $lang['LANGUAGE'] = 'Язык';
 $lang['PLG_FORECAST'] = 'Этот плагин показывает состояние погоды в то время и в том месте, где было сделано изображение или видео';
 $lang['SHOW_MODE'] = 'Показывать в графическом или текстовом режиме';
 $lang['SHOW_MODE_DESC'] = 'Выбор графического или текстового режима для виджета';
+$lang['FORECAST_PLUGIN_BY'] = 'Плагин от <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
