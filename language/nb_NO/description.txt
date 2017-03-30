@@ -1,1 +1,1 @@
-Forecast.io integrasjon for Piwigo
+Værmelding.io integrasjon for Piwigo

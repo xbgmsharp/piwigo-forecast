@@ -40,3 +40,4 @@ $lang['SHOW_LINK'] = 'Vis \'Se på værmelding\'';
 $lang['SHOW_LINK_DESC'] = 'Legg til en link etter overlegget for å kunne se den på DarkSky.net.';
 $lang['SHOW_MODE'] = 'Vis i grafisk eller tekstmodus';
 $lang['SHOW_MODE_DESC'] = 'Velg grafikken eller tekstlig modus for utvidelsen (widget)';
+$lang['FORECAST_PLUGIN_BY'] = 'Tilleggsprogram av <a href="https://github.com/xbgmsharp/piwigo-værmelding" target="_blank">xbgmsharp</a>';
