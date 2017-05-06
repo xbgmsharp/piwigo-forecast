@@ -40,3 +40,4 @@ $lang['COLOR_BKG_DESC'] = 'Couleur de l\'arrière plan, blanc par défaut';
 $lang['COLOR_TEXT'] = 'Couleur du texte';
 $lang['COLOR_TEXT_DESC'] = 'Couleur du texte et de l\'icône animée, noir par défaut';
 $lang['LANGUAGE_DESC'] = 'Sélectionner la langue souhaitée. Merci de noter que les unités du résumé seront en accord avec l\'option des unités ci-dessus. Veillez à coordonner les options comme il se doit.';
+$lang['FORECAST_PLUGIN_BY'] = 'Plugin par <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
