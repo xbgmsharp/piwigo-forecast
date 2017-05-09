@@ -40,3 +40,4 @@ $lang['API_KEY_DESC'] = '可选，输入您的API密钥，或使用代理。';
 $lang['ADD_BEFORE_DESC'] = '在何处显示天气信息。';
 $lang['API_KEY'] = 'API密钥';
 $lang['VIEW_FORECAST'] = '在DarkSky.net上查看';
+$lang['FORECAST_PLUGIN_BY'] = 'Plugin by <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
