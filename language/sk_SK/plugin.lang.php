@@ -40,3 +40,4 @@ $lang['SHOW_MODE_DESC'] = 'Vyberte grafický alebo textový režim pre widgetu';
 $lang['SHOW_MODE'] = 'Zobraziť v grafickom alebo textovom režime';
 $lang['SHOW_LINK'] = 'Zobraziť \'Pohľad na predpoveď\'';
 $lang['SHOW_LINK_DESC'] = 'Pridať odkaz na zobrazenie na DarkSky.net.';
+$lang['FORECAST_PLUGIN_BY'] = 'Doplnok od <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
