@@ -40,3 +40,4 @@ $lang['API_KEY_DESC'] = 'Προαιρετικά, εισάγετε το DarkSky.n
 $lang['API_KEY'] = 'API KEY';
 $lang['ADD_BEFORE_DESC'] = 'Πού να εμφανίζονται οι πληροφορίες καιρού.';
 $lang['ADD_BEFORE'] = 'Προσθέστε τον Καιρό πριν';
+$lang['FORECAST_PLUGIN_BY'] = 'Πρόσθετο από την <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
