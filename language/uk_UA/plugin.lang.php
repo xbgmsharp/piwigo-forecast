@@ -40,3 +40,4 @@ $lang['UNIT'] = 'Одиниці вимірювання';
 $lang['COLOR_BKG'] = 'Колір фону';
 $lang['COLOR_TEXT'] = 'Колір тексту';
 $lang['LANGUAGE'] = 'Мова';
+$lang['FORECAST_PLUGIN_BY'] = 'Plugin by <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
