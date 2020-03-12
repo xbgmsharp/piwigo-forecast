@@ -40,3 +40,4 @@ $lang['HEADER_DESC'] = 'Escriba el nombre para mostrar en la parte superior el d
 $lang['LANGUAGE'] = 'Idioma';
 $lang['SHOW_MODE'] = 'Mostrar en modo gráfico o texto';
 $lang['SHOW_MODE_DESC'] = 'Elige el modo gráfico o texto para el widget';
+$lang['FORECAST_PLUGIN_BY'] = 'Plugin para <a href="https://github.com/xbgmsharp/piwigo-forecast" target="_blank">xbgmsharp</a>';
